@@ -5,10 +5,10 @@ const path = require('path');
 
 module.exports = {
 
-    mode: 'production',
+    mode: 'development',
 
     entry: {
-        index: './source/main/index.js',
+        index: './source/page_telegram/main/index.js',
     },
 
     output: {
@@ -25,7 +25,18 @@ module.exports = {
         rules: [
             {
                 test: /\.(png|svg)$/,
-                type: 'asset/resource'
+                type: 'asset/resource',
+                generator : {
+                    filename : "assets/media/[name][ext]"
+                }
+            },
+
+            {
+                test: /\.(woff|woff2)$/,
+                type: 'asset/resource',
+                generator : {
+                    filename : "assets/fonts/[name][ext]"
+                }
             },
 
             {
@@ -62,7 +73,7 @@ module.exports = {
             },
 
             {
-                test: /\.scss$/,
+                test: /\.s(a|c)ss$/,
                 use: [
                     {
                         loader: CssMiniExtractPlugin.loader,
@@ -106,7 +117,7 @@ module.exports = {
             filename: "assets/css/[name].css" 
         }),
         new HtmlWebpackPlugin({ 
-            template: 'source/html/index.html',
+            template: 'source/page_telegram/html/index.html',
             filename: "[name].html" 
         })
     ],

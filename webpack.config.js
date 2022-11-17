@@ -4,6 +4,11 @@ const CssMiniExtractPlugin = require("mini-css-extract-plugin");
 const path = require('path');
 
 module.exports = {
+    watch: true,
+    watchOptions: {
+        aggregateTimeout: 300,
+        poll: 1000
+      },
 
     mode: 'development',
 

@@ -1,39 +1,27 @@
+
 @font-face {
-  font-family: 'robotobold';
-  src: url('../..//common/assets/fonts/roboto-bold-webfont.woff2') format('woff2'),
-       url('../..//common/assets/fonts/roboto-bold-webfont.woff') format('woff');
-  font-weight: normal;
+  font-family: 'nexa-bolduploaded_file';
+  src: url('nexa-bold-webfont.woff2') format('woff2'),
+       url('nexa-bold-webfont.woff') format('woff');
+  font-weight: 700;
   font-style: normal;
+
 }
 
 @font-face {
-  font-family: 'robotomedium';
-  src: url('../..//common/assets/fonts/roboto-medium-webfont.woff2') format('woff2'),
-       url('../..//common/assets/fonts/roboto-medium-webfont.woff') format('woff');
-  font-weight: normal;
+  font-family: 'nexa-lightuploaded_file';
+  src: url('nexa-light-webfont.woff2') format('woff2'),
+       url('nexa-light-webfont.woff') format('woff');
+  font-weight: 300;
   font-style: normal;
+
 }
 
 @font-face {
-  font-family: 'robotolight';
-  src: url('../..//common/assets/fonts/roboto-light-webfont.woff2') format('woff2'),
-       url('../..//common/assets/fonts/roboto-light-webfont.woff') format('woff');
-  font-weight: normal;
+  font-family: 'nexaregularuploaded_file';
+  src: url('nexa-regular-webfont.woff2') format('woff2'),
+       url('nexa-regular-webfont.woff') format('woff');
+  font-weight: 400;
   font-style: normal;
-}
 
-@font-face {
-  font-family: 'robotoregular';
-  src: url('../..//common/assets/fonts/roboto-regular-webfont.woff2') format('woff2'),
-       url('../..//common/assets/fonts/roboto-regular-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'robotothin';
-  src: url('../..//common/assets/fonts/roboto-thin-webfont.woff2') format('woff2'),
-       url('../..//common/assets/fonts/roboto-thin-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
 }

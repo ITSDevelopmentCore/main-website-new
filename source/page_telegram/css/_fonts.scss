@@ -1,56 +1,27 @@
+
 @font-face {
-  font-family: 'Nexablack';
-  src: url('../..//common/assets/fonts/Nexa-Black-Italic.woff') format('woff'),
-       url('../..//common/assets/fonts/NexaBlack.woff') format('woff');   
-  font-weight: normal;
+  font-family: 'nexa-bolduploaded_file';
+  src: url('nexa-bold-webfont.woff2') format('woff2'),
+       url('nexa-bold-webfont.woff') format('woff');
+  font-weight: 700;
   font-style: normal;
+
 }
 
 @font-face {
-  font-family: 'Nexabook';
-  src: url('../..//common/assets/fonts/Nexa-Book-Italic.woff') format('woff'),
-       url('../..//common/assets/fonts/Nexa-Book.woff') format('woff');
-  font-weight: normal;
+  font-family: 'nexa-lightuploaded_file';
+  src: url('nexa-light-webfont.woff2') format('woff2'),
+       url('nexa-light-webfont.woff') format('woff');
+  font-weight: 300;
   font-style: normal;
+
 }
 
 @font-face {
-  font-family: 'Nexaheavy';
-  src: url('../..//common/assets/fonts/Nexa-Heavy-Italic.woff') format('woff'),
-       url('../..//common/assets/fonts/NexaHeavy.woff') format('woff');
-  font-weight: normal;
+  font-family: 'nexaregularuploaded_file';
+  src: url('nexa-regular-webfont.woff2') format('woff2'),
+       url('nexa-regular-webfont.woff') format('woff');
+  font-weight: 400;
   font-style: normal;
-}
 
-@font-face {
-  font-family: 'Nexalight';
-  src: url('../..//common/assets/fonts/Nexa-Light-Italic.woff') format('woff'),
-       url('../..//common/assets/fonts/Nexa-Light.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
 }
-
-@font-face {
-  font-family: 'Nexaregular';
-  src: url('../..//common/assets/fonts/Nexa-Regular-Italic.woff') format('woff'),
-       url('../..//common/assets/fonts/Nexa-Regular-Italic\ \(1\).woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Nexathin';
-  src: url('../..//common/assets/fonts/Nexa-Thin-Italic.woff') format('woff'),
-       url('../..//common/assets/fonts/NexaThin.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Nexaxbold';
-  src: url('../..//common/assets/fonts/Nexa-XBold-Italic.woff') format('woff'),
-       url('../..//common/assets/fonts/Nexa-XBold.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-

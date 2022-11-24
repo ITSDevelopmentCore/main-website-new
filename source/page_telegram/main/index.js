@@ -6,8 +6,6 @@ import style from '../css/index.scss'
 
 const reactRootHeader = "react-root-header";
 
-initialize();
-
 function initialize() 
 {
     initializeHeader();
@@ -16,6 +14,7 @@ function initialize()
 function initializeHeader()
 {
     let root = document.getElementById(reactRootHeader);
+    root.resiza
     let reactDom = ReactDOM.createRoot(root)
     reactDom.render(
         <Header/>

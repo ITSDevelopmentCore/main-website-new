@@ -1,12 +1,29 @@
 import React from "react";
+import "./Footer.css";
 
-const Footer = () => (
- <Container fluid style = {{backgroundColor: '#F0F1F6', color: 'rgba(24, 24, 24, 1)' }}>
-    <Container style = {{display: 'flex', justifyContent: 'center', padding: '10px' }} >
-        <p>Test Footer</p>
-    </Container>
+function Footer() {
+  return (
+    <div className="main-footer">
+      <div className="container">
+        <div className="icons">
+        <a className="vkCom" href="https://vk.com/itsdevelopmentru"></a>
+        <a className="dzen" href="https://itsdevelopment.ru/"></a>
+        <a className="telegram" href="https://t.me/+3ERzYQm6fUxhNjky"></a>
+       <div className="upBtn">
+       </div>
 
- </Container>
-)
+        </div>
+          <div className="col">
+            <h1 className="list-unstyled">
+              <p>All rights reserved и ОГРНИП: 000000000000</p>
+            </h1>
+            <p className="col-sm">
+         Copyright &copy;{new Date().getFullYear()} its.dev
+          </p>
+          </div>
+      </div>
+    </div>
+  );
+}
 
 export default Footer;

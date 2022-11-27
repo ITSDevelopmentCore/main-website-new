@@ -12,6 +12,13 @@ module.exports = {
 
     mode: 'development',
 
+    watch: true,
+
+    watchOptions: {
+        aggregateTimeout: 200,
+        poll: 1000,
+    },
+
     entry: {
         index: './source/page_telegram/main/index.js',
     },
@@ -31,16 +38,16 @@ module.exports = {
             {
                 test: /\.(png|svg)$/,
                 type: 'asset/resource',
-                generator : {
-                    filename : "assets/media/[name][ext]"
+                generator: {
+                    filename: "assets/media/[name][ext]"
                 }
             },
 
             {
                 test: /\.(woff|woff2)$/,
                 type: 'asset/resource',
-                generator : {
-                    filename : "assets/fonts/[name][ext]"
+                generator: {
+                    filename: "assets/fonts/[name][ext]"
                 }
             },
 
@@ -83,8 +90,9 @@ module.exports = {
                     {
                         loader: CssMiniExtractPlugin.loader,
                     },
-                    { 
-                        loader: 'css-loader', options: { importLoaders: 1 } },
+                    {
+                        loader: 'css-loader', options: { importLoaders: 1 }
+                    },
                     {
                         loader: 'postcss-loader',
                         options: {
@@ -119,11 +127,11 @@ module.exports = {
 
     plugins: [
         new CssMiniExtractPlugin({
-            filename: "assets/css/[name].css" 
+            filename: "assets/css/[name].css"
         }),
-        new HtmlWebpackPlugin({ 
+        new HtmlWebpackPlugin({
             template: 'source/page_telegram/html/index.html',
-            filename: "[name].html" 
+            filename: "[name].html"
         })
     ],
 

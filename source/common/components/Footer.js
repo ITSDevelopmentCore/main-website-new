@@ -7,7 +7,7 @@ import arrow from "../assets/icons/arrow.svg";
 function Footer() {
   
   return (
-    <div className="main-footer w-full h-[264px] bg-gray-100 mt-[100%] pt-[3em] relative bottom-0">
+    <div className="main-footer w-full h-[264px]  bg-gray-100 mt-[100%] pt-[3em] relative bottom-0">
       <div className="container">
         <div className="icons flex w-full h-[100px] ml-[10%]">
         <a href="https://vk.com/itsdevelopmentru">
@@ -19,9 +19,13 @@ function Footer() {
         <a href="https://t.me/+3ERzYQm6fUxhNjky">
         <img className="w-16 h-16 ml-[26px] cursor-pointer"  src={telegram} alt=""/>
         </a>
-       <div className="upBtn w-16 h-16 ml-[70%] border-2 border-cyan-400 rounded-xl cursor-pointer">
-       <img className="w-16 h-16 text-center justify-center border-cyan-400"  src={arrow} alt=""/>
-       </div>
+       <button className="upBtn w-16 h-16 ml-[70%] border-2 border-cyan-400 rounded-xl cursor-pointer"
+       onClick={() => {
+        window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+      }}
+       >
+       <img className="w-8 h-8 ml-[15px] border-cyan-400"  src={arrow} alt=""/>
+       </button>
 
         </div>
           <div className="col">

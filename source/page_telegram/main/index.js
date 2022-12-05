@@ -1,32 +1,19 @@
 import React from "react"
 import * as ReactDOM from 'react-dom/client';
 import style from '../css/index.scss'
-import Footer from "../../common/components/Footer";
 
+import Footer from "../../common/components/Footer";
+import Header from "../../common/components/Header";
+
+const reactRootHeader = "react-root-header";
 const reactRootFooter = "react-root-footer";
 
-// const reactRootHeader = "react-root-header";
-// initialize();
-initialize2();
+initialize();
 
-// function initialize() 
-// {
-//     initializeHeader();
-// }
-
-// function initializeHeader()
-// {
-//     let root = document.getElementById(reactRootHeader);
-//     let reactDom = ReactDOM.createRoot(root)
-//     reactDom.render(
-//         <Header/>
-//     )
-// }
-
-
-function initialize2() 
+function initialize() 
 {
     initializeFooter();
+    initializeHeader();
 }
 
 function initializeFooter()
@@ -35,5 +22,14 @@ function initializeFooter()
     let reactDom = ReactDOM.createRoot(root)
     reactDom.render(
         <Footer/>
+    )
+}
+
+function initializeHeader()
+{
+    let root = document.getElementById(reactRootHeader);
+    let reactDom = ReactDOM.createRoot(root)
+    reactDom.render(
+        <Header/>
     )
 }

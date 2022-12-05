@@ -6,11 +6,10 @@ module.exports = {
       colors: theme('colors')
     }),
 
-    extend: {
-      fontFamily: {
-        'roboto': ['Roboto', 'sans-serif']
-      },
-    }
+
+    fontFamily: {
+      'nexa': ['nexa', 'sans-serif']
+    },
 
   },
   plugins: [

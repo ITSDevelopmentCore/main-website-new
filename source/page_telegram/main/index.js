@@ -12,8 +12,7 @@ initialize();
 
 function initialize() 
 {
-    initializeFooter();
-    initializeHeader();
+     initializeHeader();
 }
 
 function initializeFooter()

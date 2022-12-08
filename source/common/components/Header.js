@@ -2,9 +2,10 @@ import React from "react"
 
 import { TfiAngleDown } from 'react-icons/tfi'
 import { BsFillTelephoneFill, BsMoonStarsFill } from 'react-icons/bs'
+import {AiOutlineLine} from 'react-icons/ai'
 
-const classesMenuListItem = "dark:text-white flex flex-row items-center text-[18px] font-bold";
-const classesMenuIcon = "w-[14px] h-[10px] mt-[3px] text-sky-500 stroke-custom ml-2 mr-10";
+const classesMenuListItem = "cursor-pointer group dark:text-white flex flex-row items-center text-[18px] font-bold";
+const classesMenuIcon = "group-hover:-rotate-90 transition-all w-[14px] h-[10px] mt-[3px] text-sky-500 stroke-custom ml-2 mr-10";
 
 export default function Header() {
 
@@ -28,7 +29,7 @@ export default function Header() {
                     <span className="text-sky-500">dev</span>
                 </div>
 
-                <nav>
+                <nav className="md:hidden ">
                     <ul className="flex items-center">
                         <li className={classesMenuListItem}>
                             О компании
@@ -44,11 +45,16 @@ export default function Header() {
                         </li>
                     </ul>
                 </nav>
+
+                <div className="hidden flex-col md:flex">
+                    <AiOutlineLine className="-mb-2 text-black dark:text-white"/>
+                    <AiOutlineLine className="-mb-2 text-black dark:text-white"/>
+                    <AiOutlineLine className="text-sky-500"/>
+                </div>
             </div>
 
 
             <div className="flex items-center text-[18px] font-bold">
-
                 <BsFillTelephoneFill className="text-sky-500 w-6 h-6 mr-2" />
 
                 <div className="mr-[52px] dark:text-white">{"7 912 248-61-36"}</div>

@@ -1,5 +1,8 @@
 module.exports = {
   content: ['./source/**/*.{js,jsx,html}'],
+
+  darkMode: 'class',
+
   theme: {
 
     ripple: theme => ({

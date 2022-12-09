@@ -13,7 +13,7 @@ export default function Header() {
 
             <div className="flex">
 
-                <div className="mr-28 font-bold text-3xl">
+                <div className="mr-28 font-bold text-3xl ">
                     <span className="text-neutral-900">its.</span>
                     <span className="text-sky-500">dev</span>
                 </div>

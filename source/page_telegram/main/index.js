@@ -4,15 +4,20 @@ import style from '../css/index.scss'
 
 import Footer from "../../common/components/Footer";
 import Header from "../../common/components/Header";
+import Preview from "../components/blocks/BlockPreview";
+
 
 const reactRootHeader = "react-root-header";
 const reactRootFooter = "react-root-footer";
+const reactRootPreview = "react-root-preview";
+
 
 initialize();
 
 function initialize() 
 {
      initializeHeader();
+     initializePreview();
 }
 
 function initializeFooter()
@@ -21,6 +26,16 @@ function initializeFooter()
     let reactDom = ReactDOM.createRoot(root)
     reactDom.render(
         <Footer/>
+    )
+}
+
+
+function initializePreview()
+{
+    let root = document.getElementById(reactRootPreview);
+    let reactDom = ReactDOM.createRoot(root)
+    reactDom.render(
+        <Preview/>
     )
 }
 

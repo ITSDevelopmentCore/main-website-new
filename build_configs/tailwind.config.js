@@ -1,3 +1,5 @@
+const plugin = require('tailwindcss/plugin')
+
 module.exports = {
   content: ['./source/**/*.{js,jsx,html}'],
 
@@ -9,7 +11,6 @@ module.exports = {
       fontFamily: {
         'nexa': ['nexa', 'sans-serif']
       },
-
     },
 
     screens: {
@@ -21,8 +22,4 @@ module.exports = {
 
   },
 
-
-  plugins: [
-    require('tailwindcss-ripple')()
-  ]
 }

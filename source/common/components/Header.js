@@ -20,7 +20,7 @@ export default function Header() {
     }
 
     return (
-        <header className="container m-auto flex justify-between items-center mt-[61px]">
+        <header className="container mx-auto flex justify-between items-center mt-[61px]">
 
             <div className="flex items-center">
 

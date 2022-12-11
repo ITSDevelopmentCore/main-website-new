@@ -19,33 +19,10 @@ module.exports = {
     screens: {
       'tablets': '1000px',
       'laptop': '1440px',
-      'desktop': '1920px'
+      'desktop': '1550px'
     }
 
   },
 
-  plugins : [
-    function ({ addComponents }) {
-      addComponents({
-        '.container': {
-
-          width: '100%',
-
-          '@screen tablets': {
-            width: '895px',
-          },
-
-          '@screen laptop': {
-            width: '1330px',
-          },
-
-          '@screen desktop': {
-            width: '1515px',
-          },
-
-        }
-      })
-    }
-  ]
 
 }

@@ -3,7 +3,7 @@ import React from "react"
 export default function Header() {
 
     return (
-        <div className="container bg-green-500 mx-auto flex relative">
+        <div className="flex relative">
 
             <div className="font-extrabold text-8xl z-10">
                 <span className="dark:text-white text-neutral-900">Разработка<br/></span>

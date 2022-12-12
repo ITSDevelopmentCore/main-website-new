@@ -1,5 +1,3 @@
-const plugin = require('tailwindcss/plugin')
-
 module.exports = {
   content: ['./source/**/*.{js,jsx,html}'],
 
@@ -12,7 +10,7 @@ module.exports = {
   theme: {
     extends: {
       fontFamily: {
-        'nexa': ['nexa', 'sans-serif']
+        'nexa': ['nexa']
       },
     },
 

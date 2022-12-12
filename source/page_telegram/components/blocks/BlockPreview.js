@@ -5,17 +5,11 @@ export default function BlockPreview() {
     return (
         <div className="flex items-center justify-between pt-24">
 
-            <div className="flex flex-col relative basis-[728px]">
+            <div className="flex flex-col basis-[728px]">
 
                 <div className="font-extrabold text-[83px] leading-[95px] z-10 mb-11">
                     <span className="dark:text-white text-neutral-900">Разработка<br /></span>
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-500 via-sky-300 to-sky-500">Telegram-ботов</span>
-                </div>
-
-                <div className="font-extrabold text-[83px] leading-[95px] absolute top-1  
-                                dark:invisible">
-                    <span className="text-neutral-500 blur-sm">Разработка<br /></span>
-                    <span className="text-neutral-500 blur-sm">Telegram-ботов</span>
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-500 via-sky-400 to-sky-500">Telegram-ботов</span>
                 </div>
 
                 <div className="text-neutral-900 text-[18px] leading-8
@@ -25,6 +19,11 @@ export default function BlockPreview() {
                     Ut enim ad minim veniam, quis nostrud exercitation ullamco
                     laboris nisi ut aliquip ex ea commodo consequat.
                 </div>
+
+                <button className="mt-[56px] shadow-blue text-white text-[22px] font-bold w-[280px] h-[70px] rounded-xl bg-gradient-to-t from-sky-500 to-sky-300
+                dark:to-sky-500 transition-all duration-200 hover:shadow-blue-extended">
+                    Связаться с нами
+                </button>
 
             </div>
 

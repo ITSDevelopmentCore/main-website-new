@@ -25,9 +25,12 @@
   background-size: contain;
 }
 
-.award_dark {
-  background-image: url('../assets/media/dark_award.svg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
+.pagination-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+
+.swiper {
+    margin: 0px 0px 27px 0px;
 }

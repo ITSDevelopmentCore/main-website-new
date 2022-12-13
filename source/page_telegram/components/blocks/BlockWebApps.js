@@ -1,5 +1,7 @@
 import React from 'react';
 
+import SwiperWebApps from '../view/SwiperWebApps'
+
 export default function BlockAdvantages(props) {
 
 
@@ -10,14 +12,17 @@ export default function BlockAdvantages(props) {
                            dark:text-white'>
                 Telegram <span className='text-sky-500'>Web Apps</span>
             </h2>
-            <p className="text-neutral-900 text-[18px] leading-8 opacity-60 w-[722px]
-                            dark:text-white">
-                    Наши боты позволят колоссально снизить затраты на возвращение клиента и превращение его в постоянного. 
-                    Мы автоматизируем процесс повторных конверсий для малого и среднего бизнеса путем 
-                    добавления в Telegram всех Ваших клиентов наших ботов с приложениями. 
-                    Имея уже готовое решение всегда под рукой - клиент даже не будет думать о заказе у Ваших конкурентов..
-                </p>
-           
+
+            <p className="w-[722px] mb-16 text-neutral-900 text-[18px] leading-8 opacity-60
+                          dark:text-white">
+                Наши боты позволят колоссально снизить затраты на возвращение клиента и превращение его в постоянного.
+                Мы автоматизируем процесс повторных конверсий для малого и среднего бизнеса путем
+                добавления в Telegram всех Ваших клиентов наших ботов с приложениями.
+                Имея уже готовое решение всегда под рукой - клиент даже не будет думать о заказе у Ваших конкурентов..
+            </p>
+
+
+            <SwiperWebApps />
 
         </section>
     )

@@ -6,12 +6,15 @@ import Footer from "../../common/components/Footer";
 import Header from "../../common/components/Header";
 import Preview from "../components/blocks/BlockPreview";
 import BlockAdvantages from "../components/blocks/BlockAdvantages";
+import BlockWebApps from "../components/blocks/BlockWebApps";
+
 
 
 const reactRootHeader = "react-root-header";
 const reactRootFooter = "react-root-footer";
 const reactRootPreview = "react-root-preview";
 const reactRootAdvantages = "react-root-advantages";
+const reactRootWebApps = "react-root-webapps";
 
 
 initialize();
@@ -21,6 +24,16 @@ function initialize()
      initializeHeader();
      initializePreview();
      initializeAdvantages();
+     initializeWebApps();
+}
+
+function initializeWebApps()
+{
+    let root = document.getElementById(reactRootWebApps);
+    let reactDom = ReactDOM.createRoot(root)
+    reactDom.render(
+        <BlockWebApps/>
+    )
 }
 
 function initializeFooter()

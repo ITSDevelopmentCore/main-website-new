@@ -3,7 +3,7 @@ import React from "react"
 export default function BlockPreview() {
 
     return (
-        <div className="flex items-center justify-between pt-24">
+        <div className="flex items-center justify-between py-24">
 
             <div className="flex flex-col basis-[728px]">
 

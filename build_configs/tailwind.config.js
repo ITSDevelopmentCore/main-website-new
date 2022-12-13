@@ -1,5 +1,5 @@
 module.exports = {
-  content: ['./source/**/*.{js,jsx,html}'],
+  content: ['./source/**/*.{js,jsx,html,svg}'],
 
   darkMode: 'class',
 
@@ -12,7 +12,22 @@ module.exports = {
       boxShadow: {
         "blue": '0px 0px 40px rgba(66,183,237,0.5)',
         "blue-extended": '0px 0px 60px rgba(66,183,237,0.5)',
+      },
 
+      backgroundColor: {
+        'card-surface' : '#1A232C'
+      },
+
+      fontSize: {
+        'title': '64px',
+      },
+
+      lineHeight: {
+        'title': '73px',
+      },
+
+      borderRadius: {
+        'card': '50px',
       }
     },
 

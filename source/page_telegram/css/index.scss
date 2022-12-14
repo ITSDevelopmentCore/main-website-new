@@ -6,3 +6,31 @@
     stroke-width: 3px !important;
   }
 }
+
+.shadowed {
+  text-shadow: 2px 1px 3px #000000;
+}
+
+.mockup {
+   background-image: url('../assets/media/temp_phone-mockup.png');
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: contain;
+}
+
+.award {
+  background-image: url('../assets/media/award.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.pagination-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+
+.swiper {
+    margin: 0px 0px 27px 0px;
+}

@@ -2,13 +2,15 @@ const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CssMiniExtractPlugin = require("mini-css-extract-plugin");
 const path = require('path');
+const webpack = require('webpack');
+
 
 module.exports = {
     watch: true,
     watchOptions: {
         aggregateTimeout: 300,
         poll: 1000
-      },
+    },
 
     mode: 'development',
 
@@ -35,6 +37,8 @@ module.exports = {
     module: {
 
         rules: [
+
+
             {
                 test: /\.(png|svg)$/,
                 type: 'asset/resource',

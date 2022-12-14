@@ -20,7 +20,8 @@ export default function BlockPreview() {
                     laboris nisi ut aliquip ex ea commodo consequat.
                 </div>
 
-                <button className="mt-[56px] shadow-blue text-white text-[22px] font-bold w-[280px] h-[70px] rounded-xl bg-gradient-to-t from-sky-500 to-sky-300
+                <button className="mt-[56px] shadow-blue text-white text-[22px] font-bold w-[280px] h-[70px] rounded-xl 
+                bg-gradient-to-t from-sky-500 to-sky-300
                 dark:to-sky-500 transition-all duration-200 hover:shadow-blue-extended">
                     Связаться с нами
                 </button>

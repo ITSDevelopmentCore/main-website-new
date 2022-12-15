@@ -11,19 +11,10 @@ import 'swiper/css/pagination';
 export default function Gallery(props) {
   return (
     <Swiper
-    effect={"coverflow"}
     autoHeight={true}
-    centeredSlides={true}
-    slidesPerView={"auto"}
-    coverflowEffect={{
-      rotate: 50,
-      stretch: 700,
-      depth: 300,
-      modifier: 1,
-      slideShadows: false,
-    }}
+    slidesPerView={2}
     pagination={true}
-    modules={[EffectCoverflow, Pagination]}
+    modules={[Pagination]}
     >
       <SwiperSlide><CardWebApp/></SwiperSlide>
       <SwiperSlide><CardWebApp/></SwiperSlide>

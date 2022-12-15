@@ -7,6 +7,8 @@ import Header from "../../common/components/Header";
 import Preview from "../components/blocks/BlockPreview";
 import BlockAdvantages from "../components/blocks/BlockAdvantages";
 import BlockWebApps from "../components/blocks/BlockWebApps";
+import BlockStages from "../components/blocks/BlockStages";
+import BlockPortfolio from "../components/blocks/BlockPortfolio";
 
 
 
@@ -15,6 +17,9 @@ const reactRootFooter = "react-root-footer";
 const reactRootPreview = "react-root-preview";
 const reactRootAdvantages = "react-root-advantages";
 const reactRootWebApps = "react-root-webapps";
+const reactRootStages = "react-root-stages";
+const reactRootPortfolio = "react-root-portfolio";
+
 
 
 initialize();
@@ -25,6 +30,8 @@ function initialize()
      initializePreview();
      initializeAdvantages();
      initializeWebApps();
+     initializeStages();
+     initializePortfolio();
 }
 
 function initializeWebApps()
@@ -72,3 +79,23 @@ function initializeAdvantages()
         <BlockAdvantages/>
     )
 }
+
+function initializeStages()
+{
+    let root = document.getElementById(reactRootStages);
+    let reactDom = ReactDOM.createRoot(root);
+    reactDom.render(
+        <BlockStages/>
+    )
+}
+
+function initializePortfolio()
+{
+    let root = document.getElementById(reactRootPortfolio);
+    let reactDom = ReactDOM.createRoot(root);
+    reactDom.render(
+        <BlockPortfolio/>
+    )
+}
+
+

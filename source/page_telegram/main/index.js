@@ -11,12 +11,12 @@ import '../css/index.scss'
  */
 import Footer           from "../../common/components/Footer";
 import Header           from "../../common/components/Header";
+import Feedback         from "../../common/components/Feedback";
 import Preview          from "../components/blocks/BlockPreview";
 import BlockAdvantages  from "../components/blocks/BlockAdvantages";
 import BlockWebApps     from "../components/blocks/BlockWebApps";
 import BlockStages      from "../components/blocks/BlockStages";
 import BlockPortfolio   from "../components/blocks/BlockPortfolio";
-import Feedback         from "../../common/components/Feedback";
 
 
 initialize();

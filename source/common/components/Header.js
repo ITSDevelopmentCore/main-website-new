@@ -2,7 +2,7 @@ import React from "react"
 
 import { TfiAngleDown } from 'react-icons/tfi'
 import { BsFillTelephoneFill, BsMoonStarsFill } from 'react-icons/bs'
-import {AiOutlineLine} from 'react-icons/ai'
+import { AiOutlineLine } from 'react-icons/ai'
 
 import Symbol from './Symbol'
 
@@ -23,7 +23,7 @@ export default function Header() {
     }
 
     return (
-        <header className="mx-auto flex justify-between items-center my-[61px]">
+        <header className="flex justify-between items-center my-[60px]">
 
             <div className="flex items-center">
 
@@ -34,7 +34,8 @@ export default function Header() {
 
                 <nav className={
                     'hidden '
-                    +'laptop:block'}>
+                    + 'laptop:block'}>
+
                     <ul className="flex items-center">
                         <li className={classesMenuListItem}>
                             О компании
@@ -49,13 +50,9 @@ export default function Header() {
                             <TfiAngleDown className={classesMenuIcon} />
                         </li>
                     </ul>
+
                 </nav>
 
-                <div className="hidden flex-col md:flex">
-                    <AiOutlineLine className="-mb-2 text-black dark:text-white"/>
-                    <AiOutlineLine className="-mb-2 text-black dark:text-white"/>
-                    <AiOutlineLine className="text-sky-500"/>
-                </div>
             </div>
 
 
@@ -63,13 +60,13 @@ export default function Header() {
                 <BsFillTelephoneFill className="text-sky-500 w-6 h-6 mr-2" />
 
                 <div className="mr-[52px] dark:text-white">
-                    <Symbol symbol="+"/>
-                    7 
-                    <Symbol symbol=" "/>
-                    <Symbol symbol="("/>
-                    999 
-                    <Symbol symbol=")"/> 
-                    <Symbol symbol=" "/>
+                    <Symbol symbol="+" />
+                    7
+                    <Symbol symbol=" " />
+                    <Symbol symbol="(" />
+                    999
+                    <Symbol symbol=")" />
+                    <Symbol symbol=" " />
                     999-99-99
                 </div>
 
@@ -82,6 +79,15 @@ export default function Header() {
 
                 <BsMoonStarsFill className="text-neutral-300 w-[19px] h-[19px] dark:text-sky-500" />
             </div>
+
+            <div className={
+                    'flex flex-col '
+                    + 'laptop:hidden'}>
+                    <AiOutlineLine className="-mb-2 text-black dark:text-white" />
+                    <AiOutlineLine className="-mb-2 text-black dark:text-white" />
+                    <AiOutlineLine className="text-sky-500" />
+            </div>
+
 
         </header>
     );

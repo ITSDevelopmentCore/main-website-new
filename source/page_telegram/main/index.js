@@ -9,6 +9,7 @@ import BlockAdvantages from "../components/blocks/BlockAdvantages";
 import BlockWebApps from "../components/blocks/BlockWebApps";
 import BlockStages from "../components/blocks/BlockStages";
 import BlockPortfolio from "../components/blocks/BlockPortfolio";
+import Form from "../../common/components/feedBackForm";
 
 
 
@@ -19,10 +20,14 @@ const reactRootAdvantages = "react-root-advantages";
 const reactRootWebApps = "react-root-webapps";
 const reactRootStages = "react-root-stages";
 const reactRootPortfolio = "react-root-portfolio";
+const reactRootForm = "react-root-form";
 
 
 
 initialize();
+
+initialize3();
+
 
 function initialize() 
 {
@@ -32,6 +37,8 @@ function initialize()
      initializeWebApps();
      initializeStages();
      initializePortfolio();
+     initializefeedBackForm();
+     
 }
 
 function initializeWebApps()
@@ -42,6 +49,7 @@ function initializeWebApps()
         <BlockWebApps/>
     )
 }
+
 
 function initializeFooter()
 {
@@ -59,6 +67,15 @@ function initializePreview()
     let reactDom = ReactDOM.createRoot(root)
     reactDom.render(
         <Preview/>
+    )
+}
+
+function initializefeedBackForm()
+{
+    let root = document.getElementById(reactRootForm);
+    let reactDom = ReactDOM.createRoot(root)
+    reactDom.render(
+        <Form/>
     )
 }
 

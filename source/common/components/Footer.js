@@ -10,7 +10,7 @@ function Footer() {
   const scrollButtonHandler = () => { window.scrollTo({ top: 0, left: 0, behavior: 'smooth' }) };
 
   return (
-    <div className="w-full h-[264px] bg-gray-100 py-[3em] px-[202px] m-auto">
+    <div className="w-full h-[264px] py-[3em] px-[202px] m-auto">
 
       <div className="flex justify-between">
 

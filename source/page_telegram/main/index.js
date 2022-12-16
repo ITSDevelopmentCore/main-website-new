@@ -26,8 +26,6 @@ const reactRootForm = "react-root-form";
 
 initialize();
 
-initialize3();
-
 
 function initialize() 
 {
@@ -38,6 +36,7 @@ function initialize()
      initializeStages();
      initializePortfolio();
      initializefeedBackForm();
+     initializeFooter();
      
 }
 

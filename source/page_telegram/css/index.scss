@@ -34,3 +34,7 @@
 .swiper {
     margin: 0px 0px 27px 0px;
 }
+
+input[type=text]:focus {
+  border: 2px solid #0EA5E9;
+}

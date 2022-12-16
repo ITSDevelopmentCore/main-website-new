@@ -1,8 +1,6 @@
 import React from "react";
-import { AiOutlineImport } from "react-icons/ai";
-import Techico from "../assets/icons/techTask.svg";
+import Techico from "../assets/icons/ic_tech-task.svg";
 import '../../page_telegram/css/index.scss'
-import Symbol from './Symbol'
 
 
 function Form() {

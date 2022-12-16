@@ -1,11 +1,11 @@
-import React from "react"
+import React from "react";
 
-import { TfiAngleDown } from 'react-icons/tfi'
-import { BsFillTelephoneFill, BsMoonStarsFill } from 'react-icons/bs'
-import { AiOutlineLine } from 'react-icons/ai'
+import { TfiAngleDown } from 'react-icons/tfi';
+import { BsFillTelephoneFill, BsMoonStarsFill } from 'react-icons/bs';
+import IcMenuLight from '../assets/icons/ic_menu-light.svg';
+import IcMenuDark from '../assets/icons/ic_menu-dark.svg';
 
-import Symbol from './Symbol'
-
+import Symbol from './Symbol';
 
 const classesMenuListItem = "cursor-pointer group dark:text-white flex flex-row items-center text-[18px] font-bold";
 const classesMenuIcon = "group-hover:-rotate-90 transition-all w-[14px] h-[10px] mt-[3px] text-sky-500 stroke-custom ml-2 mr-10";
@@ -27,7 +27,9 @@ export default function Header() {
 
             <div className="flex items-center">
 
-                <div className="mr-28 font-bold text-3xl">
+                <div className={
+                    'desktop:mr-28 laptop:mr-14 '
+                    + 'font-bold text-3xl'}>
                     <span className="dark:text-white text-neutral-900">its.</span>
                     <span className="text-sky-500">dev</span>
                 </div>
@@ -56,7 +58,10 @@ export default function Header() {
             </div>
 
 
-            <div className="flex items-center text-[18px] font-bold">
+            <div className={
+                'hidden laptop:flex laptop:items-center '
+                + 'text-[18px] font-bold'}>
+
                 <BsFillTelephoneFill className="text-sky-500 w-6 h-6 mr-2" />
 
                 <div className="mr-[52px] dark:text-white">
@@ -72,21 +77,24 @@ export default function Header() {
 
                 <button className="h-[53px] w-[213px] rounded-[10px] bg-sky-500 text-white mr-[56px]">Связаться с нами</button>
 
+            </div>
+
+
+            <div className={
+                'flex items-center'
+            }>
                 <label className="inline-flex relative items-center cursor-pointer mr-3">
                     <input onClick={(e) => darkThemeHandler(e)} type="checkbox" value="" className="sr-only peer" />
                     <div className="w-11 h-6 bg-neutral-300 peer-focus:outline-none dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-sky-500"></div>
                 </label>
 
-                <BsMoonStarsFill className="text-neutral-300 w-[19px] h-[19px] dark:text-sky-500" />
+                <BsMoonStarsFill className="text-neutral-300 w-[19px] h-[19px] dark:text-sky-500  mr-9" />
+
+
+                <img src={IcMenuLight} className={
+                    'laptop:hidden '} />
             </div>
 
-            <div className={
-                    'flex flex-col '
-                    + 'laptop:hidden'}>
-                    <AiOutlineLine className="-mb-2 text-black dark:text-white" />
-                    <AiOutlineLine className="-mb-2 text-black dark:text-white" />
-                    <AiOutlineLine className="text-sky-500" />
-            </div>
 
 
         </header>

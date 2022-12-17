@@ -4,11 +4,12 @@ import { TfiAngleDown } from 'react-icons/tfi';
 import { BsFillTelephoneFill, BsMoonStarsFill } from 'react-icons/bs';
 import IcMenuLight from '../assets/icons/ic_menu-light.svg';
 import IcMenuDark from '../assets/icons/ic_menu-dark.svg';
+import MenuItems from './dataComponents/MenuItems';
 
 import Symbol from './Symbol';
 
-const classesMenuListItem = "cursor-pointer group dark:text-white flex flex-row items-center text-[18px] font-bold";
-const classesMenuIcon = "group-hover:-rotate-90 transition-all w-[14px] h-[10px] mt-[3px] text-sky-500 stroke-custom ml-2 mr-10";
+const classesMenuListItem = "cursor-pointer group dark:text-white flex flex-row items-center text-[18px] font-bold hover:block";
+const classesMenuIcon = "group-hover:-rotate-90 transition-all w-[14px] h-[10px] mt-[3px] text-sky-500 stroke-custom ml-2 mr-10 ";
 
 export default function Header(props) {
 
@@ -31,8 +32,11 @@ export default function Header(props) {
                     <ul className="flex items-center">
                         <li className={classesMenuListItem}>
                             О компании
+                            
                             <TfiAngleDown className={classesMenuIcon} />
+                            <MenuItems/>
                         </li>
+                    
                         <li className={classesMenuListItem}>
                             Услуги
                             <TfiAngleDown className={classesMenuIcon} />

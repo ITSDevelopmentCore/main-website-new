@@ -1,75 +1,130 @@
-import React, {useState} from "react"
+import React, { useState } from "react"
 
 /**
  * Imports : Icons
  */
-import { AiOutlineDownload } from 'react-icons/ai'
+import IcTechTask from '../assets/icons/ic_tech-task.svg'
 
 
 export default function FeedbackForm(props) {
 
-    const [file, setFile] = useState('');
 
-    function workWithFile(file)
-    {
+    function extractFileName(file) {
         var fileList = file.target.files;
-        console.log(fileList[0].name)
+        if (file.target.files.length != 0) {
+            setFile(fileList[0].name)
+        }
+        alert(fileList[0].name)
     }
 
+    const [file, setFile] = useState('Прикрепите техническое задание или описание проекта');
+
     return (
-        <form>
+        <form className={
+            'flex flex-col'}>
+
+            <div className={
+                'flex space-x-[50px]'
+            }>
+
+                <div className="mb-5">
+
+                    <p className={
+                        'mb-3.5 '
+                        + 'font-normal text-xl leading-[38px] '
+                        + 'dark:text-white'}>
+                        Номер телефона
+                    </p>
+
+                    <input
+                        className={
+                            'w-[400px] h-[70px] p-6 mb-6 '
+                            + 'font-sans font-semibold rounded-lg focus:outline-none focus:border-2 focus:border-sky-500 caret-sky-500 text-lg '
+                            + 'dark:bg-slate-800 dark:text-white'}
+                        type='tel'
+                        placeholder='7 999 999 99 99'>
+                    </input>
+
+                    <p className={
+                        'mb-3.5 '
+                        + 'font-normal text-xl leading-[38px] '
+                        + 'dark:text-white'}>
+                        Как к Вам обращаться?
+                    </p>
+
+                    <input
+                        className={
+                            'w-[400px] h-[70px] p-6 mb-6'
+                            + 'font-sans font-semibold rounded-lg focus:outline-none focus:border-2 focus:border-sky-500 caret-sky-500 text-lg '
+                            + 'dark:bg-slate-800'}
+                        placeholder="Иван" />
+
+                </div>
+
+
+                <div>
+                    <p className={
+                        'mb-3.5 '
+                        + 'font-normal text-xl leading-[38px] '
+                        + 'dark:text-white'}>
+                        E-mail
+                    </p>
+
+                    <input
+                        className={
+                            'w-[400px] h-[70px] p-6 mb-6 '
+                            + 'font-sans font-semibold rounded-lg focus:outline-none focus:border-2 focus:border-sky-500 caret-sky-500 text-lg '
+                            + 'dark:bg-slate-800'}
+                        placeholder="my@gmail.com" />
+
+                    <p className={
+                        'mb-3.5 '
+                        + 'font-normal text-xl leading-[38px] '
+                        + 'dark:text-white'}>
+                        Техническое задание
+                    </p>
+
+
+                    <div className="flex items-center">
+
+                        <label className="inline-block w-[70px] h-[70px] mr-5"
+                        for="linkedByOuterLabel">
+                            <img className={
+                                'w-full h-full flex justify-center items-center '
+                                + 'cursor-pointer bg-gradient-to-t from-sky-500 to-sky-300 rounded-lg'}
+                                src={IcTechTask}>
+                            </img>
+                            <input
+                                className="opacity-0"
+                                type="file"
+                                id="linkedByOuterLabel"
+                                name="linkedByOuterLabel"
+                                accept=".doc, .txt, .pdf"
+                                onChange={(e) => extractFileName(e)} />
+                        </label>
+
+                        <div className="w-[270px]">{file}</div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
             <p className={
                 'mb-3.5 '
-                + 'font-normal text-lg '
+                + 'font-normal text-xl leading-[38px] '
                 + 'dark:text-white'}>
-                Номер телефона
-            </p>
-
-            <input
-                className={
-                    'w-[400px] h-[71px] p-6 '
-                    + 'font-sans rounded-lg focus:outline-none focus:border-2 focus:border-sky-500 '
-                    + 'dark:bg-slate-800'}
-                type='tel'
-                placeholder='7 999 999 99 99'>
-            </input>
-
-            <input
-                className={
-                    'w-[400px] h-[71px] ml-[50px] p-6 '
-                    + 'font-sans rounded-lg focus:outline-none focus:border-2 focus:border-sky-500 '
-                    + 'dark:bg-slate-800'}
-                placeholder="my@gmail.com" />
-
-            <p className="font-normal text-lg dark:text-white mb-3.5 mt-6">
-                Ваше имя <span className="ml-[362px]">Техническое задание</span>
-            </p>
-
-            <input
-                className={
-                    'w-[400px] h-[71px] p-6 '
-                    + 'font-sans rounded-lg focus:outline-none focus:border-2 focus:border-sky-500 '
-                    + 'dark:bg-slate-800'}
-                placeholder="Иван" />
-
-            <label className="inline-block">
-                <button className="w-[71px] h-[71px] cursor-pointer ml-[50px] mb-[-50px] bg-gradient-to-t  from-sky-500 to-sky-300 rounded-lg flex justify-center items-center">
-                    <AiOutlineDownload className="w-1/2 h-1/2 text-white" />
-                </button>
-                <input
-                    className="opacity-0"
-                    type="file"
-                    onChange={workWithFile} />
-            </label>
-
-            <p className="font-normal text-lg dark:text-white mb-3.5 mt-6">
                 Подробное описание требуемого проекта
             </p>
 
+
             <input
                 className={
-                    'w-[400px] h-[71px] pb-[89px] p-6 '
-                    + 'font-sans rounded-lg focus:outline-none focus:border-2 focus:border-sky-500 '
+                    'w-full h-[142px] pb-[90px] p-6 '
+                    + 'font-sans font-semibold rounded-lg focus:outline-none focus:border-2 focus:border-sky-500 caret-sky-500 text-lg '
                     + 'dark:bg-slate-800'}
                 placeholder="Или опишите Ваш проект" />
 

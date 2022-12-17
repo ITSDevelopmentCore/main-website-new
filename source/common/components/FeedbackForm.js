@@ -103,7 +103,7 @@ export default function FeedbackForm(props) {
                                 onChange={(e) => extractFileName(e)} />
                         </label>
 
-                        <div className="w-[270px]">{file}</div>
+                        <div className="w-[270px] dark:text-white">{file}</div>
 
                     </div>
 

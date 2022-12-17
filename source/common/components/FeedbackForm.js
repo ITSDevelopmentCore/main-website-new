@@ -95,7 +95,7 @@ export default function FeedbackForm(props) {
                                 src={IcTechTask}>
                             </img>
                             <input
-                                className="opacity-0"
+                                className="hidden"
                                 type="file"
                                 id="linkedByOuterLabel"
                                 name="linkedByOuterLabel"

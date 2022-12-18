@@ -8,8 +8,8 @@ import MenuItems from './dataComponents/MenuItems';
 
 import Symbol from './Symbol';
 
-const classesMenuListItem = "cursor-pointer group dark:text-white flex flex-row items-center text-[18px] font-bold hover:block";
-const classesMenuIcon = "group-hover:-rotate-90 transition-all w-[14px] h-[10px] mt-[3px] text-sky-500 stroke-custom ml-2 mr-10 ";
+const classesMenuListItem = "cursor-pointer group dark:text-white flex flex-row items-center text-[18px] font-bold group";
+const classesMenuIcon = "group-hover:-rotate-90 transition-all w-[14px] h-[10px] mt-[3px] text-sky-500 stroke-custom ml-2 mr-10 inline-block";
 
 export default function Header(props) {
 
@@ -30,20 +30,21 @@ export default function Header(props) {
                     + 'laptop:block'}>
 
                     <ul className="flex items-center">
-                        <li className={classesMenuListItem}>
+                        <li className={classesMenuListItem} key = "О компании">
                             О компании
-                            
                             <TfiAngleDown className={classesMenuIcon} />
-                            <MenuItems/>
+                            <MenuItems items={["Пункт 1", "Пункт 2", "Пункт 3"]}/>
                         </li>
                     
-                        <li className={classesMenuListItem}>
+                        <li className={classesMenuListItem} key = "услуги">
                             Услуги
                             <TfiAngleDown className={classesMenuIcon} />
+                            <MenuItems items={["Пункт 111111111", "Пункт 2", "Пункт 3"]}/>
                         </li>
-                        <li className={classesMenuListItem}>
+                        <li className={classesMenuListItem} key = "Решения">
                             Решения
                             <TfiAngleDown className={classesMenuIcon} />
+                            <MenuItems items={["Пункт 1", "Пункт 2", "Пункт 3"]}/>
                         </li>
                     </ul>
 

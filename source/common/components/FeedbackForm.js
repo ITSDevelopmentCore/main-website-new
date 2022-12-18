@@ -88,7 +88,7 @@ export default function FeedbackForm(props) {
                     <div className="flex items-center">
 
                         <label className="inline-block w-[70px] h-[70px] mr-5"
-                        for="linkedByOuterLabel">
+                        htmlFor="linkedByOuterLabel">
                             <img className={
                                 'w-full h-full flex justify-center items-center '
                                 + 'cursor-pointer bg-gradient-to-t from-sky-500 to-sky-300 rounded-lg'}

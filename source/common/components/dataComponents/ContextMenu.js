@@ -1,29 +1,29 @@
 import React from 'react';
 
-export default function MenuItems(props) {
+export default function ContextMenu(props) {
 
     return (
         <ul className='absolute group-hover:block top-[100px] bg-white
          dark:bg-slate-800 dark:text-white hidden
-         transition-all duration-700'>
+         rounded-lg pt-[150px]'>
 
             {props.items.map(function (item) {
-                return <MenuItem key={item} title={item} />;
+                return <MenuItem key={item} title={item}/>;
+
             })}
-
-
         </ul>
     )
-
 }
 
 function MenuItem(props) {
     return (
         <li>
-            <a href='#' className=''>
+            <a href={props.link} className=''>
                 {props.title}
             </a>
         </li>
     )
 
 }
+
+

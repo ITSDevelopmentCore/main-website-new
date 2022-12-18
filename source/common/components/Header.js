@@ -4,7 +4,7 @@ import { TfiAngleDown } from 'react-icons/tfi';
 import { BsFillTelephoneFill, BsMoonStarsFill } from 'react-icons/bs';
 import IcMenuLight from '../assets/icons/ic_menu-light.svg';
 import IcMenuDark from '../assets/icons/ic_menu-dark.svg';
-import MenuItems from './dataComponents/MenuItems';
+import ContextMenu from './dataComponents/ContextMenu';
 
 import Symbol from './Symbol';
 
@@ -33,18 +33,21 @@ export default function Header(props) {
                         <li className={classesMenuListItem} key = "О компании">
                             О компании
                             <TfiAngleDown className={classesMenuIcon} />
-                            <MenuItems items={["Пункт 1", "Пункт 2", "Пункт 3"]}/>
+                            <ContextMenu items={["Пункт 1", "Пункт 2", "Пункт 3"]} 
+                            link={["https://itsdevelopment.ru/"]}/>
                         </li>
                     
                         <li className={classesMenuListItem} key = "услуги">
                             Услуги
                             <TfiAngleDown className={classesMenuIcon} />
-                            <MenuItems items={["Пункт 111111111", "Пункт 2", "Пункт 3"]}/>
+                            <ContextMenu items={["Пункт 11111111", "Пункт 2", "Пункт 3"]} 
+                            link={["https://tailwindcss.com/docs/background-color"]}/>
                         </li>
                         <li className={classesMenuListItem} key = "Решения">
                             Решения
                             <TfiAngleDown className={classesMenuIcon} />
-                            <MenuItems items={["Пункт 1", "Пункт 2", "Пункт 3"]}/>
+                            <ContextMenu items={["Пункт 1", "Пункт 2", "Пункт 3"]} 
+                            link={["https://vk.com/ads?act=office&union_id=1607011672"]}/>
                         </li>
                     </ul>
 

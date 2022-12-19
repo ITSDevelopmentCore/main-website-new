@@ -34,7 +34,7 @@ export default function BlockPreview() {
 
             </div>
 
-            <div className={'flex items-center'}>
+            <div className={'flex basis-0 items-center'}>
 
                 <div className={
                     'desktop:h-[666px] desktop:w-[333px] mockup '

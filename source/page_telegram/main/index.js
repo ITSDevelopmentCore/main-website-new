@@ -49,7 +49,7 @@ class App extends React.Component {
             <BlockStages />
             <BlockPortfolio />
             <Feedback />
-            <Footer />
+            <Footer theme={this.state.theme}/>
         </main>)
     }
 }

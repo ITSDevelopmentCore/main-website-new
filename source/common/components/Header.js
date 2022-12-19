@@ -8,7 +8,7 @@ import IcMenuDark from '../assets/icons/ic_menu-dark.svg';
 import Symbol from './Symbol';
 import ThemeSwitcher from "./ThemeSwitcher";
 
-const classesMenuListItem = "cursor-pointer group dark:text-white flex flex-row items-center text-[18px] font-bold group";
+const classesMenuListItem = "cursor-pointer group dark:text-white flex flex-row items-center text-[18px] laptop:text-base font-bold group";
 const classesMenuIcon = "group-hover:-rotate-90 transition-all w-[14px] h-[10px] mt-[3px] text-sky-500 stroke-custom ml-2 mr-10 inline-block";
 
 export default function Header(props) {
@@ -19,7 +19,7 @@ export default function Header(props) {
             <div className="flex items-center">
 
                 <div className={
-                    'laptop:mr-14 desktop:mr-28 '
+                    '-mt-2 laptop:mr-14 desktop:mr-28 '
                     + 'font-bold text-3xl'}>
                     <span className={'text-neutral-900 dark:text-white'}>its.</span>
                     <span className="text-sky-500">dev</span>
@@ -58,7 +58,7 @@ export default function Header(props) {
                 </div>
 
                 <button className={
-                    'hidden py-3 px-5 large:block '
+                    'hidden py-3 px-5 laptop:block '
                     + 'rounded-[10px] bg-sky-500 text-white'}>Свяжитесь со мной</button>
 
                 <ThemeSwitcher changeThemeHandler={props.changeThemeHandler} />

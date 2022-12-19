@@ -4,7 +4,7 @@ import { TfiAngleDown } from 'react-icons/tfi';
 import { BsFillTelephoneFill, BsMoonStarsFill } from 'react-icons/bs';
 import IcMenuLight from '../assets/icons/ic_menu-light.svg';
 import IcMenuDark from '../assets/icons/ic_menu-dark.svg';
-import ContextMenu from './dataComponents/ContextMenu';
+import ContextMenu from './ContextMenu';
 
 import Symbol from './Symbol';
 

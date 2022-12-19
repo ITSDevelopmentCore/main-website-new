@@ -9,19 +9,18 @@ export default function BlockPreview() {
 
 
     return (
-
         <>
             <div className={'flex items-center justify-between py-24'}>
 
                 <div className={'flex flex-col justify-center basis-1/2 space-y-[56px]'}>
 
-                    <div className={'font-extrabold laptop:text-[85px] laptop:leading-[95px] desktop:text-[95px] desktop:leading-[105px]'}>
+                    <div className={'font-extrabold laptop:text-[75px] laptop:leading-[85px] large:text-[85px] large:leading-[95px] desktop:text-[95px] desktop:leading-[105px]'}>
                         <span className={'text-neutral-900 dark:text-white'}>Разработка<br /></span>
                         <span className={'text-transparent bg-clip-text bg-gradient-to-r from-sky-500 via-sky-400 to-sky-500'}>Telegram-ботов</span>
                     </div>
 
                     <div className={
-                        'laptop:text-base laptop:leading-8 desktop:text-lg desktop:leading-[34px] text-neutral-900 '
+                        'laptop:text-sm laptop:leading-7 large:text-base large:leading-8 desktop:text-lg desktop:leading-[34px] text-neutral-900 '
                         + 'dark:text-white'}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -38,11 +37,12 @@ export default function BlockPreview() {
 
                 </div>
 
-                <div className={'flex basis-0 items-center'}>
+                <div className={'flex items-center'}>
 
                     <div className={
                         'desktop:h-[666px] desktop:w-[333px] mockup '
-                        + 'laptop:h-[550px] laptop:w-[275px]'}>
+                        + 'large:h-[550px] large:w-[275px]'
+                        + 'laptop:h-[450px] laptop:w-[225px]'}>
 
                     </div>
 

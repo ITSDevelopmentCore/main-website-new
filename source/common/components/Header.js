@@ -8,7 +8,7 @@ import IcMenuDark from '../assets/icons/ic_menu-dark.svg';
 import Symbol from './Symbol';
 import ThemeSwitcher from "./ThemeSwitcher";
 
-const classesMenuListItem = "cursor-pointer group dark:text-white flex flex-row items-center text-[18px] laptop:text-base font-bold group";
+const classesMenuListItem = "cursor-pointer group flex items-center font-bold dark:text-white ";
 const classesMenuIcon = "group-hover:-rotate-90 transition-all w-[14px] h-[10px] mt-[3px] text-sky-500 stroke-custom ml-2 mr-10 inline-block";
 
 export default function Header(props) {
@@ -49,12 +49,12 @@ export default function Header(props) {
             </div>
 
 
-            <div className="flex items-center text-lg font-bold space-x-12">
+            <div className="flex items-center font-bold space-x-[52px]">
 
                 <div className={'hidden large:flex large:items-center '
                     + 'dark:text-white'}>
                     <BsFillTelephoneFill className="text-sky-500 w-6 h-6 mr-3" />
-                    <Symbol symbol="+" />7 <Symbol symbol="(" />999<Symbol symbol=")" /> 999-99-99
+                    <Symbol symbol="+" />7&nbsp;<Symbol symbol="(" />999<Symbol symbol=")" />&nbsp;999-99-99
                 </div>
 
                 <button className={

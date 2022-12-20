@@ -19,19 +19,19 @@ import BlockStages from "../components/blocks/BlockStages";
 import BlockPortfolio from "../components/blocks/BlockPortfolio";
 
 class App extends React.Component {
-    
+
     state = {
-        theme : 'light',
+        theme: 'light',
     }
 
-    darkThemeHandler(darkModeSwitch){
+    darkThemeHandler(darkModeSwitch) {
         if (darkModeSwitch.target.checked) {
             document.documentElement.classList.add('dark')
-            this.setState({theme : 'dark'});
+            this.setState({ theme: 'dark' });
         }
         else {
             document.documentElement.classList.remove('dark')
-            this.setState({theme : 'light'});
+            this.setState({ theme: 'light' });
         }
     }
 
@@ -40,17 +40,20 @@ class App extends React.Component {
     }
 
     render() {
-        return(
-        <main>
-            <Header theme={this.state.theme} changeThemeHandler={this.darkThemeHandler.bind(this)}/>
-            <Preview />
-            <BlockAdvantages />
-            <BlockWebApps />
-            <BlockStages />
-            <BlockPortfolio />
-            <Feedback />
-            <Footer theme={this.state.theme}/>
-        </main>)
+        return (
+            <main className="desktop:text-[18px] large:text-[16px] laptop:text-[14px]">
+                <Header
+                    theme={this.state.theme}
+                    changeThemeHandler={this.darkThemeHandler.bind(this)} />
+                <Preview />
+                <BlockAdvantages />
+                <BlockWebApps />
+                <BlockStages />
+                <BlockPortfolio />
+                <Feedback />
+                <Footer
+                    theme={this.state.theme} />
+            </main>)
     }
 }
 

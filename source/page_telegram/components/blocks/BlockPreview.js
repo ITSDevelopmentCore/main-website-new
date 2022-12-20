@@ -2,8 +2,8 @@ import React from "react"
 
 export default function BlockPreview() {
 
-    const classesPreviewAdvantageDigit = "text-[70px] leading-[75px] text-center laptop:text-[60px] laptop:leading-[65px]";
-    const classesPreviewAdvantageText = "font-base text-lg leading-6 opacity-60 text-center laptop:text-base laptop:leading-5";
+    const classesPreviewAdvantageDigit = "text-center desktop:text-[70px] desktop:leading-[75px] large:text-[60px] large:leading-[65px] laptop:text-[50px] laptop:leading-[55px]";
+    const classesPreviewAdvantageText = "font-base opacity-60 text-center";
     const classesPreviewAdvantageDividerLaptop = "h-[2px] w-full bg-neutral-900 opacity-10 my-10 dark:bg-white";
     const classesPreviewAdvantageDivider = "w-[2px] h-[150px] bg-neutral-900 opacity-10 my-10 dark:bg-white";
 
@@ -12,16 +12,14 @@ export default function BlockPreview() {
         <>
             <div className={'flex items-center justify-between py-24'}>
 
-                <div className={'flex flex-col justify-center basis-1/2 space-y-[56px]'}>
+                <div className={'flex flex-col justify-center basis-1/2 space-y-[2.7em] large:min-w-[670px] laptop:min-w-[595px]'}>
 
                     <div className={'font-extrabold laptop:text-[75px] laptop:leading-[85px] large:text-[85px] large:leading-[95px] desktop:text-[95px] desktop:leading-[105px]'}>
                         <span className={'text-neutral-900 dark:text-white'}>Разработка<br /></span>
                         <span className={'text-transparent bg-clip-text bg-gradient-to-r from-sky-500 via-sky-400 to-sky-500'}>Telegram-ботов</span>
                     </div>
 
-                    <div className={
-                        'laptop:text-sm laptop:leading-7 large:text-base large:leading-8 desktop:text-lg desktop:leading-[34px] text-neutral-900 '
-                        + 'dark:text-white'}>
+                    <div className={'text-neutral-900 dark:text-white'}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         Ut enim ad minim veniam, quis nostrud exercitation ullamco
@@ -37,33 +35,34 @@ export default function BlockPreview() {
 
                 </div>
 
-                <div className={'flex items-center'}>
+                <div className={'mockup desktop:w-[330px] large:w-[300px] laptop:w-[270px] aspect-[1/2]'} />
 
-                    <div className={
-                        'desktop:h-[666px] desktop:w-[333px] mockup '
-                        + 'large:h-[550px] large:w-[275px]'
-                        + 'laptop:h-[450px] laptop:w-[225px]'}>
+                <div className={
+                    'py-[50px] px-[22px] space-y-[2em] hidden flex-col laptop:flex desktop:w-[195px] large:w-[185px] laptop:w-[175px]'
+                    + 'bg-white rounded-[50px] text-neutral-900 border '
+                    + 'dark:bg-[#1A232C] dark:text-white dark:border-slate-800'}>
 
+                    <div className="flex flex-col">
+                        <div className={classesPreviewAdvantageDigit}>2</div>
+                        <p className={classesPreviewAdvantageText}>Года<br/> на рынке</p>
                     </div>
 
-                    <div className={
-                        'py-[44px] px-[22px] ml-20 hidden laptop:w-[170px] laptop:flex laptop:flex-col desktop:w-[195px] '
-                        + 'bg-white rounded-[50px] text-neutral-900 '
-                        + 'dark:bg-[#1A232C] dark:text-white dark:border dark:border-slate-800'}>
+                    <div className={classesPreviewAdvantageDividerLaptop} />
 
-                        <div className={classesPreviewAdvantageDigit}>2</div>
-                        <p className={classesPreviewAdvantageText}>Года на рынке</p>
-                        <div className={classesPreviewAdvantageDividerLaptop} />
-
+                    <div className="flex flex-col">
                         <div className={classesPreviewAdvantageDigit}>100</div>
-                        <p className={classesPreviewAdvantageText}>Готовых проектов</p>
-                        <div className={classesPreviewAdvantageDividerLaptop} />
+                        <p className={classesPreviewAdvantageText}>Готовых<br/> проектов</p>
+                    </div>
 
+                    <div className={classesPreviewAdvantageDividerLaptop} />
+
+                    <div className="flex flex-col">
                         <div className={classesPreviewAdvantageDigit}>20т</div>
-                        <p className={classesPreviewAdvantageText}>Минимальный бюджет</p>
+                        <p className={classesPreviewAdvantageText}>Минимальный<br/> бюджет</p>
                     </div>
 
                 </div>
+
 
             </div>
 
@@ -75,7 +74,7 @@ export default function BlockPreview() {
 
                 <div className="flex flex-col basis-[200px]">
                     <div className={classesPreviewAdvantageDigit}>2</div>
-                    <p className={classesPreviewAdvantageText}>Года на рынке</p>
+                    <p className={classesPreviewAdvantageText}>Года<br />на рынке</p>
                 </div>
 
                 <div className={classesPreviewAdvantageDivider} />

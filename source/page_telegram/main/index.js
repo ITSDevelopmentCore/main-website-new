@@ -41,7 +41,7 @@ class App extends React.Component {
 
     render() {
         return (
-            <main className="desktop:text-[18px] large:text-[16px] laptop:text-[14px]">
+            <main className="desktop:text-[18px] large:text-[16px] text-[14px]">
                 <Header
                     theme={this.state.theme}
                     changeThemeHandler={this.darkThemeHandler.bind(this)} />

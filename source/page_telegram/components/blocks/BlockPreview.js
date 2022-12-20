@@ -19,7 +19,7 @@ export default function BlockPreview() {
                         <span className={'text-transparent bg-clip-text bg-gradient-to-r from-sky-500 via-sky-400 to-sky-500'}>Telegram-ботов</span>
                     </div>
 
-                    <div className={'text-neutral-900 dark:text-white'}>
+                    <div className={'text-neutral-900 dark:text-white desktop:leading-[34px] large:leading-[32px] leading-[28px]'}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         Ut enim ad minim veniam, quis nostrud exercitation ullamco

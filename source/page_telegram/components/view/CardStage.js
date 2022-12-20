@@ -1,41 +1,42 @@
 import React from 'react';
 
-/**
- * Imports : Utils
- */
-import Symbol from '../../../common/components/Symbol';
-
-
 export default function CardStage(props) {
 
     return (
         <section className={
-            'w-[455px] h-[255px] mb-10 relative'}>
+            'w-full aspect-[3/2] relative'}>
 
             <span className={
-                'text-[115px] leading-[115px] align-text-top'
-                + 'font-extrabold text-transparent bg-clip-text bg-gradient-to-t from-sky-500 via-sky-400 to-sky-300 absolute'}>
-                2
+                'align-text-top '
+                + 'font-extrabold text-transparent bg-clip-text bg-gradient-to-t from-sky-500 via-sky-400 to-sky-300 absolute '
+                + 'laptop:text-[100px] laptop:leading-[100px] '
+                + 'large:text-[100px] large:leading-[100px] '
+                + 'desktop:text-[115px] desktop:leading-[115px] '}>
+                {props.number == undefined ? 3 : props.number}
             </span>
 
 
             <div className={
-                'w-[430px] h-[221px] top-[34px] left-[25px] p-12 absolute z-10 '
-                + 'opacity-80 bg-white rounded-card '
-                + 'dark:bg-card-surface dark:border dark:border-slate-800'}>
+                'absolute left-[10%] right-0 bottom-0 p-[10%] '
+                + 'opacity-80 bg-white border '
+                + 'laptop:rounded-[30px] laptop:top-[20%] laptop:p-[5%] '
+                + 'large:rounded-[40px] large:top-[10%] large:p-[10%] '
+                + 'desktop:rounded-[50px] '
+                + 'dark:bg-card-surface dark:border-slate-800'}>
 
                 <h3 className={
-                    'font-extrabold text-4xl leading-8 mb-6 text-neutral-900 '
-                    +'dark:text-white'
-                }>
-                    Составление Т<Symbol symbol="/"/>З
+                    'font-extrabold mb-6 text-neutral-900 '
+                    + 'laptop:text-[20px] '
+                    + 'large:text-[24px] '
+                    + 'desktop:text-[28px] '
+                    + 'dark:text-white'}>
+                    {props.title == undefined ? "Разработка" : props.title}
                 </h3>
 
                 <p className={
-                    'text-lg leading-6 opacity-60 text-neutral-900 '
-                    +'dark:text-white'
-                }>
-                    Готовим Т<Symbol symbol="/"/>З и предоставляем его Заказчику до полного утверждения.
+                    'opacity-60 text-neutral-900 '
+                    + 'dark:text-white'}>
+                    {props.description == undefined ? "Команда программистов высокой квалификации разрабатывает продукт согласно ТЗ." : props.description}
                 </p>
 
             </div>

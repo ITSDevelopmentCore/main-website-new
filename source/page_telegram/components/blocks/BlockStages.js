@@ -11,29 +11,26 @@ export default function BlockStages(props) {
     return (
         <section className="mt-[265px]">
 
-            <h2 className='text-title leading-title text-neutral-900 font-extrabold mb-12
-                           dark:text-white'>
+            <h2 className={
+                'mb-12 '
+                + 'text-title leading-title text-neutral-900 font-extrabold '
+                + 'dark:text-white'}>
                 Процесс работы
             </h2>
 
-            <div className={
-                'flex flex-wrap justify-between'
-            }>            
+            <div className={'grid grid-cols-3 gap-y-[15%] gap-x-[3%]'}>
                 <CardStage />
                 <CardStage />
                 <CardStage />
                 <CardStage />
                 <CardStage />
                 <CardStage />
-
-                <div className={
-                    'w-full flex justify-between mt-[224px]'
-                }>
-                    <CardBonus/>
-                    <CardBonus/>
-                </div>
             </div>
 
+            <div className={'w-full flex justify-between mt-[224px]'}>
+                <CardBonus />
+                <CardBonus />
+            </div>
 
         </section>
     )

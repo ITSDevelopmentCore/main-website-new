@@ -3,9 +3,9 @@ import React from 'react';
 export default function ContextMenu(props) {
 
     return (
-        <ul className='absolute group-hover:block top-[100px] bg-white
+        <ul className='absolute group-hover:block top-24 bg-white
          dark:bg-slate-800 dark:text-white hidden
-         rounded-lg pt-[5px] pr-[50px] pl-[10px]'>
+         rounded-lg pt-1 pr-12 pl-2.5'>
 
             {props.items.map(function (item) {
                 return <MenuItem key={item} title={item}/>;

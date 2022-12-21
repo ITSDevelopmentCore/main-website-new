@@ -77,7 +77,7 @@ export default function Header(props) {
                         999-99-99
                     </div>
 
-                    <button className="h-[53px] w-[213px] rounded-[10px] bg-sky-500 text-white mr-[56px]">Связаться с нами</button>
+                    <button className="h-14 w-[213px] rounded-lg bg-sky-500 text-white mr-14">Связаться с нами</button>
 
                 </div>
 

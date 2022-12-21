@@ -31,7 +31,7 @@ export default function FeedbackForm(props) {
 
                     <p className={
                         'mb-3.5 '
-                        + 'font-normal text-xl leading-[38px] '
+                        + 'font-normal text-xl leading-9 '
                         + 'dark:text-white'}>
                         Номер телефона
                     </p>
@@ -47,7 +47,7 @@ export default function FeedbackForm(props) {
 
                     <p className={
                         'mb-3.5 '
-                        + 'font-normal text-xl leading-[38px] '
+                        + 'font-normal text-xl  '
                         + 'dark:text-white'}>
                         Как к Вам обращаться?
                     </p>
@@ -65,7 +65,7 @@ export default function FeedbackForm(props) {
                 <div>
                     <p className={
                         'mb-3.5 '
-                        + 'font-normal text-xl leading-[38px] '
+                        + 'font-normal text-xl leading-9 '
                         + 'dark:text-white'}>
                         E-mail
                     </p>
@@ -79,7 +79,7 @@ export default function FeedbackForm(props) {
 
                     <p className={
                         'mb-3.5 '
-                        + 'font-normal text-xl leading-[38px] '
+                        + 'font-normal text-xl leading-9 '
                         + 'dark:text-white'}>
                         Техническое задание
                     </p>
@@ -115,7 +115,7 @@ export default function FeedbackForm(props) {
 
             <p className={
                 'mb-3.5 '
-                + 'font-normal text-xl leading-[38px] '
+                + 'font-normal text-xl leading-9 '
                 + 'dark:text-white'}>
                 Подробное описание требуемого проекта
             </p>

@@ -27,7 +27,7 @@ export default function BlockStages(props) {
                 <CardStage />
             </div>
 
-            <div className={'w-full flex justify-between mt-[224px]'}>
+            <div className={'w-full flex justify-between mt-56'}>
                 <CardBonus />
                 <CardBonus />
             </div>

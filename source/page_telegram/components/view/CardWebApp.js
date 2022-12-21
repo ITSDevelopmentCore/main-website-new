@@ -18,7 +18,7 @@ export default function CardWebApp(props) {
                 </p>
                 <div className='flex justify-between'>
                 <img src={WebAppOneQR}/>
-                    <p className='text-[12px] opacity-60 text-neutral-900 w-[146px] dark:text-white'>Сканируйте QR-код или перейтите по ссылке, чтобы ознакомиться с тестовым приложением</p>
+                    <p className='text-xs opacity-60 text-neutral-900 w-36 dark:text-white'>Сканируйте QR-код или перейтите по ссылке, чтобы ознакомиться с тестовым приложением</p>
                 </div>
             </div>
             <img src={WebAppOne}/>

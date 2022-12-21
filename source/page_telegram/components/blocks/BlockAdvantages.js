@@ -22,9 +22,9 @@ export default function BlockAdvantages(props) {
 
             <div className='flex justify-between'>
 
-                <div className='grid grid-cols-2 gap-11 mr-[100px]'>
+                <div className='grid grid-cols-2 gap-11 mr-24'>
                     <CardAdvantage >
-                        <RiApps2Fill className='text-sky-500 w-[58px] h-[58px] absolute top-[40px] right-[40px]' />
+                        <RiApps2Fill className='text-sky-500 w-14 h-14 absolute top-10 right-10' />
                         <h4 className='font-extrabold text-4xl leading-8 mb-6 text-neutral-900
                                      dark:text-white'>
                             <span className='text-sky-500'>60<Symbol symbol='+' /></span><br />проектов
@@ -35,7 +35,7 @@ export default function BlockAdvantages(props) {
                         </p>
                     </CardAdvantage>
                     <CardAdvantage >
-                        <BsGem className='text-sky-500 w-[58px] h-[58px] absolute top-[40px] right-[40px]' />
+                        <BsGem className='text-sky-500 w-14 h-14 absolute top-10 right-10' />
                         <h4 className='font-extrabold text-4xl leading-8 mb-6 text-neutral-900
                                      dark:text-white'>
                             Современное решение
@@ -46,7 +46,7 @@ export default function BlockAdvantages(props) {
                         </p>
                     </CardAdvantage>
                     <CardAdvantage >
-                        <SiMusicbrainz className='text-sky-500 w-[58px] h-[58px] absolute top-[40px] right-[40px]' />
+                        <SiMusicbrainz className='text-sky-500 w-14 h-14 absolute top-10 right-10' />
                         <h4 className='font-extrabold text-4xl leading-8 mb-6 text-neutral-900
                                      dark:text-white'>
                             Работа на результат
@@ -57,7 +57,7 @@ export default function BlockAdvantages(props) {
                         </p>
                     </CardAdvantage>
                     <CardAdvantage >
-                        <RiServiceFill className='text-sky-500 w-[58px] h-[58px] absolute top-[40px] right-[40px]' />
+                        <RiServiceFill className='text-sky-500 w-14 h-14 absolute top-10 right-10' />
                         <h4 className='font-extrabold text-4xl leading-8 mb-6 text-neutral-900
                                      dark:text-white'>
                             Безупречный сервис

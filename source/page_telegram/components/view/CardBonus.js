@@ -18,7 +18,7 @@ export default function CardBonus(props) {
             + 'bg-white rounded-card '
             + 'dark:bg-card-surface dark:border dark:border-slate-800'}>
 
-            <RiApps2Fill className='text-sky-500 w-[58px] h-[58px] absolute top-[40px] right-[40px]' />
+            <RiApps2Fill className='text-sky-500 w-14 h-14 absolute top-10 right-10' />
 
             <h4 className={
                 'font-extrabold text-4xl leading-8 mb-6 text-neutral-900 '

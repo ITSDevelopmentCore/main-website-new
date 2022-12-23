@@ -135,7 +135,7 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             template: 'source/page_telegram/html/index.html',
-            filename: "[name].html"
+            filename: "html/[name].html"
         })
     ],
 

@@ -3,7 +3,7 @@ import React, { useState } from "react"
 /**
  * Imports : Icons
  */
-import IcTechTask from '../assets/icons/ic_tech-task.svg'
+import IcTechTask from '../../assets/icons/ic_tech-task.svg'
 
 
 export default function FeedbackForm(props) {

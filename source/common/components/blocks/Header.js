@@ -2,20 +2,19 @@ import React from "react";
 
 import { TfiAngleDown } from 'react-icons/tfi';
 import { BsFillTelephoneFill, BsMoonStarsFill } from 'react-icons/bs';
-import IcMenuLight from '../assets/icons/ic_menu-light.svg';
-import IcMenuDark from '../assets/icons/ic_menu-dark.svg';
-import ContextMenu from './dataComponents/ContextMenu';
+import IcMenuLight from '../../assets/icons/ic_menu-light.svg';
+import IcMenuDark from '../../assets/icons/ic_menu-dark.svg';
 
-import Symbol from './Symbol';
+import Symbol from '../view/Symbol';
+import DropdownMenu from "../view/DropdownMenu";
 
 const classesMenuListItem = "cursor-pointer group dark:text-white flex flex-row items-center text-[18px] font-bold group ";
 const classesMenuIcon = "group-hover:-rotate-90 transition-all w-[14px] h-[10px] mt-[3px] text-sky-500 stroke-custom ml-2 mr-10 inline-block ";
-const paddingItems = "p-[150px]";
 
 export default function Header(props) {
 
     return (
-        <header className="flex justify-between items-center my-[60px]">
+        <header className="flex justify-between items-center py-[60px]">
 
             <div className="flex items-center">
 
@@ -31,26 +30,47 @@ export default function Header(props) {
                     + 'laptop:block'}>
 
                     <ul className="flex items-center">
-                        <li className={classesMenuListItem} key = "О компании">
-                            О компании
-                            <TfiAngleDown className={classesMenuIcon}/>
-                            <ContextMenu className={paddingItems}
-                            items={["Пункт 1", "Пункт 2", "Пункт 3"]}
-                            link={["https://itsdevelopment.ru/"]}/>
-                        </li>
-                    
-                        <li className={classesMenuListItem} key = "услуги">
-                            Услуги
-                            <TfiAngleDown className={classesMenuIcon} />
-                            <ContextMenu items={["Пункт 11111111", "Пункт 2", "Пункт 3"]} 
-                            link={["https://tailwindcss.com/docs/background-color"]}/>
-                        </li>
-                        <li className={classesMenuListItem} key = "Решения">
-                            Решения
-                            <TfiAngleDown className={classesMenuIcon} />
-                            <ContextMenu items={["Пункт 1", "Пункт 2", "Пункт 3"]} 
-                            link={["https://vk.com/ads?act=office&union_id=1607011672"]}/>
-                        </li>
+
+                        <DropdownMenu
+                            title="О компании"
+                            items={[
+                                {
+                                    title: "О нас",
+                                    link: "https://google.com"
+                                },
+                                {
+                                    title: "Вакансии и карьера",
+                                    link: "https://google.com"
+                                }
+                            ]} />
+                        <DropdownMenu
+                            title="Услуги"
+                            items={[
+                                {
+                                    title: "Telegram",
+                                    link: "https://google.com"
+                                },
+                                {
+                                    title: "Мобильная разработка",
+                                    link: "https://google.com"
+                                }, 
+                                {
+                                    title: "Web разработка",
+                                    link: "https://google.com"
+                                },
+                                {
+                                    title: "Startup MVP",
+                                    link: "https://google.com"
+                                },
+                            ]} />
+                        <DropdownMenu
+                            title="Решения"
+                            items={[
+                                {
+                                    title: "Bot Systems",
+                                    link: "https://google.com"
+                                }
+                            ]} />
                     </ul>
 
                 </nav>

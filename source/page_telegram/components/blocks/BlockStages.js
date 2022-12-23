@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'; 
 
 /**
  * Imports : Project React components
@@ -7,7 +7,7 @@ import CardStage from '../view/CardStage';
 import CardBonus from '../view/CardBonus';
 
 export default function BlockStages(props) {
-
+  
     return (
         <section className="mt-[265px]">
 

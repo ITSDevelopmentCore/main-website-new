@@ -9,14 +9,15 @@ import '../css/index.scss'
 /**
  * Imports: Blocks
  */
-import Footer from "../../common/components/Footer";
-import Header from "../../common/components/Header";
-import Feedback from "../../common/components/Feedback";
+import Footer from "../../common/components/blocks/Footer";
+import Header from "../../common/components/blocks/Header";
+import Feedback from "../../common/components/blocks/Feedback";
 import Preview from "../components/blocks/BlockPreview";
 import BlockAdvantages from "../components/blocks/BlockAdvantages";
 import BlockWebApps from "../components/blocks/BlockWebApps";
 import BlockStages from "../components/blocks/BlockStages";
 import BlockPortfolio from "../components/blocks/BlockPortfolio";
+
 
 class App extends React.Component {
 

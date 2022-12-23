@@ -5,9 +5,7 @@ import { RiApps2Fill } from 'react-icons/ri';
 import { BsGem } from 'react-icons/bs';
 import { SiMusicbrainz } from 'react-icons/si';
 import { RiServiceFill } from 'react-icons/ri';
-import Symbol from '../../../common/components/Symbol';
-
-import Award from '../../assets/media/award.svg'
+import Symbol from '../../../common/components/view/Symbol';
 
 export default function BlockAdvantages(props) {
 

@@ -1,18 +1,18 @@
 import React from "react";
 
-import IcDzen from '../assets/icons/IcDzen'
-import IcVK from '../assets/icons/IcVK'
-import IcTelegram from '../assets/icons/IcTelegram'
+import IcDzen from '../../assets/icons/IcDzen'
+import IcVK from '../../assets/icons/IcVK'
+import IcTelegram from '../../assets/icons/IcTelegram'
 
 import { AiOutlineArrowUp } from 'react-icons/ai'
-import Symbol from './Symbol';
+import Symbol from '../view/Symbol';
 
 function Footer(props) {
 
   const scrollButtonHandler = () => { window.scrollTo({ top: 0, left: 0, behavior: 'smooth' }) };
 
   return (
-    <div className="mt-44">
+    <div className="p-44">
 
       <div className="flex justify-center tablets:justify-between ">
 

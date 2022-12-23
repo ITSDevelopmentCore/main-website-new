@@ -1,6 +1,6 @@
 import React from "react";
 import FeedbackForm from "./FeedbackForm";
-import '../../page_telegram/css/index.scss'
+import '../../../page_telegram/css/index.scss'
 
 
 function Form() {

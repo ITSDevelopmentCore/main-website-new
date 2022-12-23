@@ -3,7 +3,7 @@ import React from 'react';
 /**
  * Imports : Utils
  */
-import Symbol from '../../../common/components/Symbol';
+import Symbol from '../../../common/components/view/Symbol';
 
 /**
  * Imports : Icons

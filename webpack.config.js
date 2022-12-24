@@ -22,7 +22,8 @@ module.exports = {
     },
 
     entry: {
-        index: './source/page_telegram/main/index.js',
+        telegram: './source/page_telegram/main/index.js',
+        development: './source/page_development/main/index.js'
     },
 
     output: {
@@ -135,7 +136,13 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             template: 'source/page_telegram/html/index.html',
-            filename: "html/[name].html"
+            chunks: ['telegram'],
+            filename: "html/telegram.html"
+        }),
+        new HtmlWebpackPlugin({
+            template: 'source/page_development/html/index.html',
+            chunks: ['development'],
+            filename: "html/development.html"
         })
     ],
 

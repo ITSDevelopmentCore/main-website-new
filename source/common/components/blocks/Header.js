@@ -38,11 +38,11 @@ export default function Header() {
                             items={[
                                 {
                                     title: "О нас",
-                                    link: "https://google.com"
+                                    link: "./development.html"
                                 },
                                 {
                                     title: "Вакансии и карьера",
-                                    link: "https://google.com"
+                                    link: "./development.html"
                                 }
                             ]} />
                         <DropdownMenu
@@ -50,19 +50,19 @@ export default function Header() {
                             items={[
                                 {
                                     title: "Telegram",
-                                    link: "https://google.com"
+                                    link: "./development.html"
                                 },
                                 {
                                     title: "Мобильная разработка",
-                                    link: "https://google.com"
+                                    link: "./development.html"
                                 }, 
                                 {
                                     title: "Web разработка",
-                                    link: "https://google.com"
+                                    link: "./development.html"
                                 },
                                 {
                                     title: "Startup MVP",
-                                    link: "https://google.com"
+                                    link: "./development.html"
                                 },
                             ]} />
                         <DropdownMenu
@@ -70,7 +70,7 @@ export default function Header() {
                             items={[
                                 {
                                     title: "Bot Systems",
-                                    link: "https://google.com"
+                                    link: "./development.html"
                                 }
                             ]} />
                     </ul>

@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import * as ReactDOM from 'react-dom/client';
 
 /**
@@ -9,6 +9,7 @@ import '../css/index.scss'
 /**
  * Imports: Blocks
  */
+import ModalDarkTheme from "../../common/components/modals/ModalDarkTheme";
 import Footer from "../../common/components/blocks/Footer";
 import Header from "../../common/components/blocks/Header";
 import Feedback from "../../common/components/blocks/Feedback";
@@ -18,44 +19,42 @@ import BlockWebApps from "../components/blocks/BlockWebApps";
 import BlockStages from "../components/blocks/BlockStages";
 import BlockPortfolio from "../components/blocks/BlockPortfolio";
 
+import { CookiesProvider, useCookies } from "react-cookie";
+import { setDarkTheme } from "../../common/scripts/themeScripts";
+import { showDarkThemeModal } from "../../common/scripts/changeViewByIdScripts";
 
-class App extends React.Component {
+function App() {
+    const [cookies, setCookie] = useCookies(["user"]);
 
-    state = {
-        theme: 'light',
-    }
-
-    darkThemeHandler(darkModeSwitch) {
-        if (darkModeSwitch.target.checked) {
-            document.documentElement.classList.add('dark')
-            this.setState({ theme: 'dark' });
+    useEffect(() => {
+        if (cookies.theme == 'dark') {
+            setDarkTheme(true);
         }
         else {
-            document.documentElement.classList.remove('dark')
-            this.setState({ theme: 'light' });
+            setDarkTheme(false);
         }
-    }
 
-    constructor(props) {
-        super(props)
-    }
+        if (cookies.firstVisit == undefined) {
+            const timer = setTimeout(() => {
+                showDarkThemeModal();
+            }, 3000);
+            setCookie('firstVisit', false);
+        }
+    })
 
-    render() {
-        return (
-            <main className="desktop:text-[18px] large:text-[16px] text-[14px]">
-                <Header
-                    theme={this.state.theme}
-                    changeThemeHandler={this.darkThemeHandler.bind(this)} />
-                <Preview />
-                <BlockAdvantages />
-                <BlockWebApps />
-                <BlockStages />
-                <BlockPortfolio />
-                <Feedback />
-                <Footer
-                    theme={this.state.theme} />
-            </main>)
-    }
+    return (
+        <main>
+            <ModalDarkTheme />
+
+            <Header />
+            <Preview />
+            <BlockAdvantages />
+            <BlockWebApps />
+            <BlockStages />
+            <BlockPortfolio />
+            <Feedback />
+            <Footer />
+        </main>)
 }
 
 initialize();
@@ -64,6 +63,9 @@ function initialize() {
     let root = document.getElementById("root");
     let reactDom = ReactDOM.createRoot(root)
     reactDom.render(
-        <App />
+        <CookiesProvider>
+            <App />
+        </CookiesProvider>
     )
 }
+

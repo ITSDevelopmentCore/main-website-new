@@ -4,7 +4,9 @@ import { TfiAngleDown } from 'react-icons/tfi';
 function DropdownMenu(props) {
     return (
         <div className="dropdown dropdown-hover group">
-            <label tabindex="0" className="cursor-pointer dark:text-white items-center text-[18px] font-bold flex">
+            <label 
+            tabindex="0" 
+            className="cursor-pointer dark:text-white items-center font-bold flex">
                 {props.title}
                 <TfiAngleDown className="group-hover:-rotate-90 transition-all w-[14px] h-[10px] mt-[3px] text-sky-500 stroke-custom ml-2 mr-10 inline-block" />
             </label>

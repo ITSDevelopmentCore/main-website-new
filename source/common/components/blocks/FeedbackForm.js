@@ -6,8 +6,7 @@ import React, { useState } from "react"
 import IcTechTask from '../../assets/icons/ic_tech-task.svg'
 
 
-export default function FeedbackForm(props) {
-
+export default function FeedbackForm() {
 
     function extractFileName(file) {
         var fileList = file.target.files;
@@ -20,41 +19,32 @@ export default function FeedbackForm(props) {
     const [file, setFile] = useState('Прикрепите техническое задание или описание проекта');
 
     return (
-        <form className={
-            'flex flex-col'}>
+        <form className={'grow flex flex-col'}>
 
-            <div className={
-                'flex space-x-[50px]'
-            }>
+            <div className={'flex space-x-[50px]'}>
 
-                <div className="mb-5">
+                <div className="basis-1/2">
 
-                    <p className={
-                        'mb-3.5 '
-                        + 'font-normal text-xl leading-9 '
-                        + 'dark:text-white'}>
+                    <p className={'mb-3.5 '}>
                         Номер телефона
                     </p>
 
                     <input
                         className={
-                            'w-[400px] h-[70px] p-6 mb-6 '
+                            'w-full h-[70px] p-6 mb-6 '
                             + 'font-sans font-semibold rounded-lg focus:outline-none focus:border-2 focus:border-sky-500 caret-sky-500 text-lg '
                             + 'dark:bg-slate-800 dark:text-white'}
                         type='tel'
                         placeholder='7 999 999 99 99'>
                     </input>
 
-                    <p className={
-                        'mb-3.5 '
-                        + 'font-normal text-xl  '
-                        + 'dark:text-white'}>
+                    <p className={'mb-3.5 '}>
                         Как к Вам обращаться?
                     </p>
 
                     <input
                         className={
-                            'w-[400px] h-[70px] p-6 mb-6'
+                            'w-full h-[70px] p-6 mb-6 '
                             + 'font-sans font-semibold rounded-lg focus:outline-none focus:border-2 focus:border-sky-500 caret-sky-500 text-lg '
                             + 'dark:bg-slate-800'}
                         placeholder="Иван" />
@@ -62,33 +52,30 @@ export default function FeedbackForm(props) {
                 </div>
 
 
-                <div>
-                    <p className={
-                        'mb-3.5 '
-                        + 'font-normal text-xl leading-9 '
-                        + 'dark:text-white'}>
+                <div className="basis-1/2">
+
+                    <p className={'mb-3.5 '}>
                         E-mail
                     </p>
 
                     <input
                         className={
-                            'w-[400px] h-[70px] p-6 mb-6 '
+                            'w-full h-[70px] p-6 mb-6 '
                             + 'font-sans font-semibold rounded-lg focus:outline-none focus:border-2 focus:border-sky-500 caret-sky-500 text-lg '
                             + 'dark:bg-slate-800'}
                         placeholder="my@gmail.com" />
 
-                    <p className={
-                        'mb-3.5 '
-                        + 'font-normal text-xl leading-9 '
-                        + 'dark:text-white'}>
+                    <p className={'mb-3.5 '}>
+
                         Техническое задание
                     </p>
 
 
                     <div className="flex items-center">
 
-                        <label className="inline-block w-[70px] h-[70px] mr-5"
-                        htmlFor="linkedByOuterLabel">
+                        <label
+                            className="inline-block w-[70px] h-[70px] mr-5"
+                            htmlFor="linkedByOuterLabel">
                             <img className={
                                 'w-full h-full flex justify-center items-center '
                                 + 'cursor-pointer bg-gradient-to-t from-sky-500 to-sky-300 rounded-lg'}
@@ -107,23 +94,18 @@ export default function FeedbackForm(props) {
 
                     </div>
 
-
                 </div>
 
             </div>
 
-
-            <p className={
-                'mb-3.5 '
-                + 'font-normal text-xl leading-9 '
-                + 'dark:text-white'}>
+            <p className={'mb-3.5 '}>
                 Подробное описание требуемого проекта
             </p>
 
 
             <input
                 className={
-                    'w-full h-[142px] pb-[90px] p-6 '
+                    'w-full h-[140px] pb-[90px] p-6 '
                     + 'font-sans font-semibold rounded-lg focus:outline-none focus:border-2 focus:border-sky-500 caret-sky-500 text-lg '
                     + 'dark:bg-slate-800'}
                 placeholder="Или опишите Ваш проект" />

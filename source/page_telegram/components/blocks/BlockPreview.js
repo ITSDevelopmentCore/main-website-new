@@ -9,8 +9,8 @@ export default function BlockPreview() {
 
 
     return (
-        <>
-            <section className={'flex items-center justify-between py-24'}>
+        <section>
+            <div className={'flex items-center justify-between py-24'}>
 
                 <div className={'flex flex-col justify-center basis-1/2 space-y-[2.7em] large:min-w-[670px]'}>
 
@@ -104,7 +104,7 @@ export default function BlockPreview() {
 
             </div>
 
-        </>
+        </section>
     );
 
 }

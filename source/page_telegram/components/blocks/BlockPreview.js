@@ -10,21 +10,27 @@ export default function BlockPreview() {
 
     return (
         <>
-            <div className={'flex items-center justify-between py-24'}>
+            <section className={'flex items-center justify-between py-24'}>
 
-                <div className={'flex flex-col justify-center basis-1/2 space-y-[2.7em] large:min-w-[670px] laptop:min-w-[595px]'}>
+                <div className={'flex flex-col justify-center basis-1/2 space-y-[2.7em] large:min-w-[670px]'}>
 
-                    <div className={'font-extrabold laptop:text-[75px] laptop:leading-[85px] large:text-[85px] large:leading-[95px] desktop:text-[95px] desktop:leading-[105px]'}>
-                        <span className={'text-neutral-900 dark:text-white'}>Разработка<br /></span>
+                    <h1 className={
+                        'font-extrabold '
+                        +'laptop:text-[45px] laptop:leading-[55px] '
+                        +'large:text-[75px] large:leading-[85px] '
+                        +'desktop:text-[95px] desktop:leading-[105px]'}>
+
+                        <span className={
+                            'text-neutral-900 '
+                           +'dark:text-white'}>Разработка<br /></span>
                         <span className={'text-transparent bg-clip-text bg-gradient-to-r from-sky-500 via-sky-400 to-sky-500'}>Telegram-ботов</span>
-                    </div>
 
-                    <div className={'text-neutral-900 dark:text-white desktop:leading-[34px] large:leading-[32px] leading-[28px]'}>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat.
-                    </div>
+                    </h1>
+
+                    <p className={'text-neutral-900 dark:text-white desktop:leading-[34px] large:leading-[32px] leading-[28px]'}>
+                        Телеграм боты в 2023 году - самое эффективное средство автоматизации и цифрового маркетинга с небольшим бюджетом.
+                        Мы реализуем уникальных ботов с веб интерфейсами, гарантирующих перевыполнение ожиданий заказчика и легкую интеграцию в ваш бизнес.
+                    </p>
 
                     <button className={
                         'p-5 px-11 w-max '
@@ -35,7 +41,12 @@ export default function BlockPreview() {
 
                 </div>
 
-                <div className={'mockup desktop:w-[330px] large:w-[300px] laptop:w-[270px] aspect-[1/2]'} />
+                <div className="mockup-phone desktop:w-[330px] large:w-[300px] laptop:w-[250px] aspect-[1/2] border-primary">
+                    <div className="camera"></div>
+                    <div className="display">
+                        <div className="w-full h-full bg-white"></div>
+                    </div>
+                </div>
 
                 <div className={
                     'py-[50px] px-[22px] space-y-[2em] hidden flex-col laptop:flex desktop:w-[195px] large:w-[185px] laptop:w-[175px]'
@@ -44,21 +55,21 @@ export default function BlockPreview() {
 
                     <div className="flex flex-col">
                         <div className={classesPreviewAdvantageDigit}>2</div>
-                        <p className={classesPreviewAdvantageText}>Года<br/> на рынке</p>
+                        <p className={classesPreviewAdvantageText}>Года<br /> на рынке</p>
                     </div>
 
                     <div className={classesPreviewAdvantageDividerLaptop} />
 
                     <div className="flex flex-col">
                         <div className={classesPreviewAdvantageDigit}>100</div>
-                        <p className={classesPreviewAdvantageText}>Готовых<br/> проектов</p>
+                        <p className={classesPreviewAdvantageText}>Готовых<br /> проектов</p>
                     </div>
 
                     <div className={classesPreviewAdvantageDividerLaptop} />
 
                     <div className="flex flex-col">
                         <div className={classesPreviewAdvantageDigit}>20т</div>
-                        <p className={classesPreviewAdvantageText}>Минимальный<br/> бюджет</p>
+                        <p className={classesPreviewAdvantageText}>Минимальный<br /> бюджет</p>
                     </div>
 
                 </div>

@@ -1,9 +1,15 @@
 import React from "react";
 
+/**
+ * Imports : Media
+ */
 import { BsFillTelephoneFill } from 'react-icons/bs';
 import IcMenuLight from '../../assets/icons/ic_menu-light.svg';
 import IcMenuDark from '../../assets/icons/ic_menu-dark.svg';
 
+/**
+ * Imports : View
+ */
 import Symbol from '../view/Symbol';
 import DropdownMenu from "../view/DropdownMenu";
 import ThemeSwitcher from "../view/ThemeSwitcher";

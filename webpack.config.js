@@ -14,13 +14,6 @@ module.exports = {
 
     mode: 'development',
 
-    watch: true,
-
-    watchOptions: {
-        aggregateTimeout: 200,
-        poll: 1000,
-    },
-
     entry: {
         telegram: './source/page_telegram/main/index.js',
         development: './source/page_development/main/index.js'

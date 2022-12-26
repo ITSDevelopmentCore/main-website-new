@@ -4,6 +4,7 @@ import React, { useState } from "react"
  * Imports : Icons
  */
 import IcTechTask from '../../assets/icons/ic_tech-task.svg'
+import Symbol from '../view/Symbol';
 
 
 export default function FeedbackForm() {
@@ -21,21 +22,22 @@ export default function FeedbackForm() {
     return (
         <form className={'grow flex flex-col'}>
 
-            <div className={'flex space-x-[50px]'}>
+            <div className={'large:flex large:space-x-[50px] mb-[20px]'}>
 
                 <div className="basis-1/2">
 
                     <p className={'mb-3.5 '}>
-                        Номер телефона
+                        Номер телефона <span className="text-red-400"><Symbol symbol='*' /></span>
                     </p>
 
                     <input
                         className={
                             'w-full h-[70px] p-6 mb-6 '
-                            + 'font-sans font-semibold rounded-lg focus:outline-none focus:border-2 focus:border-sky-500 caret-sky-500 text-lg '
+                            + 'font-sans font-semibold rounded-lg focus:outline-none focus:border-2 focus:border-sky-500 caret-sky-500 '
                             + 'dark:bg-slate-800 dark:text-white'}
                         type='tel'
-                        placeholder='7 999 999 99 99'>
+                        placeholder='7 999 999 99 99'
+                        name="number">
                     </input>
 
                     <p className={'mb-3.5 '}>
@@ -45,9 +47,10 @@ export default function FeedbackForm() {
                     <input
                         className={
                             'w-full h-[70px] p-6 mb-6 '
-                            + 'font-sans font-semibold rounded-lg focus:outline-none focus:border-2 focus:border-sky-500 caret-sky-500 text-lg '
+                            + 'font-sans font-semibold rounded-lg focus:outline-none focus:border-2 focus:border-sky-500 caret-sky-500 '
                             + 'dark:bg-slate-800'}
-                        placeholder="Иван" />
+                        placeholder="Иван"
+                        name="name" />
 
                 </div>
 
@@ -55,44 +58,44 @@ export default function FeedbackForm() {
                 <div className="basis-1/2">
 
                     <p className={'mb-3.5 '}>
-                        E-mail
+                        E-mail <span className="text-red-400"><Symbol symbol='*' /></span>
                     </p>
 
                     <input
                         className={
                             'w-full h-[70px] p-6 mb-6 '
-                            + 'font-sans font-semibold rounded-lg focus:outline-none focus:border-2 focus:border-sky-500 caret-sky-500 text-lg '
+                            + 'font-sans font-semibold rounded-lg focus:outline-none focus:border-2 focus:border-sky-500 caret-sky-500 '
                             + 'dark:bg-slate-800'}
-                        placeholder="my@gmail.com" />
+                        placeholder="my@gmail.com"
+                        name="email" />
 
                     <p className={'mb-3.5 '}>
-
                         Техническое задание
                     </p>
 
 
-                    <div className="flex items-center">
+                    <label
+                        className="flex mb-5 items-center"
+                        for='linkedByOuterLabel'>
 
-                        <label
-                            className="inline-block w-[70px] h-[70px] mr-5"
-                            htmlFor="linkedByOuterLabel">
                             <img className={
-                                'w-full h-full flex justify-center items-center '
-                                + 'cursor-pointer bg-gradient-to-t from-sky-500 to-sky-300 rounded-lg'}
+                                'mr-5 '
+                                + 'cursor-pointer rounded-lg'}
                                 src={IcTechTask}>
                             </img>
+
                             <input
                                 className="hidden"
                                 type="file"
                                 id="linkedByOuterLabel"
-                                name="linkedByOuterLabel"
                                 accept=".doc, .txt, .pdf"
-                                onChange={(e) => extractFileName(e)} />
-                        </label>
+                                onChange={(e) => extractFileName(e)}
+                                name="techtask" />
 
-                        <div className="w-[270px] dark:text-white">{file}</div>
 
-                    </div>
+                        <div className="text-[16px] grow dark:text-white">{file}</div>
+
+                    </label>
 
                 </div>
 
@@ -103,18 +106,19 @@ export default function FeedbackForm() {
             </p>
 
 
-            <input
+            <textarea
                 className={
                     'w-full h-[140px] pb-[90px] p-6 '
-                    + 'font-sans font-semibold rounded-lg focus:outline-none focus:border-2 focus:border-sky-500 caret-sky-500 text-lg '
+                    + 'font-sans font-semibold rounded-lg focus:outline-none focus:border-2 focus:border-sky-500 caret-sky-500 scrollbar-hide '
                     + 'dark:bg-slate-800'}
                 placeholder="Или опишите Ваш проект" />
 
-            <div>
-                <button className="mt-10 shadow-blue text-white rounded-lg text-xl font-bold w-[280px]  h-[71px] bg-gradient-to-t  from-sky-500 to-sky-300 dark:to-sky-500 transition-all duration-200 hover:shadow-blue-extended">
-                    Отправить
-                </button>
-            </div>
+            <button className={
+                'mt-10 w-[280px] p-[20px] mx-auto '
+                + 'text-white rounded-lg text-[20px] font-bold shadow-blue  bg-gradient-to-t  from-sky-500 to-sky-300 dark:to-sky-500 transition-all duration-200 hover:shadow-blue-extended '
+                + 'laptop:mx-0'}>
+                Отправить
+            </button>
 
         </form>
     )

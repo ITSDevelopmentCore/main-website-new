@@ -7,20 +7,28 @@ function Form() {
 
   return (
 
-    <div className={'flex justify-between mt-[270px]'}>
+    <section className={
+      'mt-[270px] '
+      +'laptop:flex laptop:justify-between'}>
 
-      <div className={'basis-[40%]'}>
+      <div className={
+        'basis-[50%] '
+        +'large:basis-[40%]'}>
 
         <h3 className={
-          'mb-[36px] '
-          + 'font-extrabold text-[64px] leading-[73px] '
+          'mb-[36px] text-[28px] leading-[32px] '
+          + 'font-extrabold text-center '
+          + 'laptop:text-[52px] laptop:leading-[58px] laptop:text-left '
+          + 'large:text-[58px] large:leading-[64px] '
+          + 'desktop:text-[64px] desktop:leading-[70px] '
           + 'dark:text-white'}>
           Оставьте заявку<br/> и мы <span className="text-sky-500"> свяжемся <br />с вами </span>
         </h3>
 
         <p className={
-          'w-[370px] h-[105px] mt-9 '
-          + 'text-slate-500 leading-[36px]'}>
+          'w-full mt-10 mb-20 '
+          + 'text-slate-500 leading-[36px] text-center '
+          + 'laptop:text-[18px] laptop:text-left laptop:w-[370px]'}>
           Среднее время ожидания обратной связи от 1 до 10 минут. В случае приложения технического задания время отклика может составлять от 10 до 20 минут.
         </p>
 
@@ -28,7 +36,7 @@ function Form() {
 
       <FeedbackForm />
 
-    </div>
+    </section>
 
   );
 }

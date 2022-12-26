@@ -4,63 +4,94 @@ function CardPortfolio(props) {
 
     return (
         <section className={
-            'flex p-[45px] mb-[100px] w-[750px] justify-between '
+            'p-[45px] mb-[100px] w-[90%] h-[600px] relative '
+            + 'laptop:w-[750px] laptop:h-[720px] laptop:flex laptop:justify-between '
             + 'bg-white rounded-[50px] '
             + 'dark:bg-card-surface'}>
 
-            <div className={'flex flex-col justify-between max-w-[300px]'}>
+
+
+            <div className='laptop:hidden flex justify-center items-start'>
+                <div class="mockup-phone border-primary h-[600px] aspect-[1/2] scale-[0.6] -mt-[120px]">
+                    <div class="camera"></div>
+                    <div class="display">
+                        <div class="bg-white w-full h-full"></div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div className={'flex flex-col absolute bottom-[30px] left-[30px] right-[30px] bg-white '
+                + 'laptop:max-w-[300px] laptop:justify-between laptop:static '
+                + 'dark:bg-card-surface'}>
+
 
                 <h4 className={
-                    'text-[35px] leading-[32px] '
-                    +'font-bold'
+                    'text-[26px] leading-[23px] mb-[7px] mt-[20px] '
+                    + 'laptop:text-[35px] laptop:leading-[32px] laptop:my-0 '
+                    + 'font-bold'
                 }>
                     {props.title}
                 </h4>
 
                 <p className={
-                    'text-justify text-[16px] leading-6 opacity-60 '
+                    'text-justify text-[12px] leading-[16px] opacity-60 mb-[17px] '
+                    +'laptop:text-[16px] laptop:leading-[24px] laptop:mb-0 '
                 }>
                     {props.description}
                 </p>
 
-                <div>
+                <div className='mb-[22px] laptop:mb-0'>
                     <h4 className={
                         'mb-[20px] '
-                        + 'text-[24px] leading-[22px] font-bold'
+                        + 'font-bold text-[16px] leading-[16px] '
+                        +'laptop:text-[24px] laptop:leading-[22px]'
                     }>
                         Бюджет проекта:
                     </h4>
 
                     <p className={
-                        'text-[32px] leading-[29px] text-sky-500 font-extrabold'
+                        'text-[23px] leading-[20px] text-sky-500 font-extrabold '
+                        +'laptop:text-[32px] laptop:leading-[29px]'
                     }>
                         {props.budget}
                     </p>
                 </div>
 
-                <div>
-                    <h4 className={
+                <div className='mb-[22px] laptop:mb-0'>
+                <h4 className={
                         'mb-[20px] '
-                        + 'text-[24px] leading-[22px] font-bold'
+                        + 'font-bold text-[16px] leading-[16px] '
+                        +'laptop:text-[24px] laptop:leading-[22px]'
                     }>
                         Затрачено:
                     </h4>
 
                     <p className={
-                        'text-[32px] leading-[29px] text-sky-500 font-extrabold'
+                        'text-[23px] leading-[20px] text-sky-500 font-extrabold '
+                        +'laptop:text-[32px] laptop:leading-[29px]'
                     }>
                         {props.result}
                     </p>
                 </div>
 
+                <a className='laptop:hidden'>
+                    <button className='btn w-full bg-sky-500 text-white'>
+                        Посмотреть
+                    </button>
+                </a>
                 <img
                     className={
-                        'w-[140px] h-[140px] '
-                        + 'rounded-[15px]'}
+                        'hidden w-[140px] h-[140px] '
+                        + 'rounded-[15px] '
+                        + 'laptop:block '}
                     src={props.qr} />
             </div>
 
-            <div className={'flex justify-center items-center'}>
+            <div className={
+                'hidden '
+                + 'laptop:flex laptop:justify-center laptop:items-center '}>
                 <div class="mockup-phone border-primary h-[595px] aspect-[1/2] ">
                     <div class="camera"></div>
                     <div class="display">

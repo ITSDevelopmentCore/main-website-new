@@ -26,5 +26,15 @@
   background-size: contain;
 }
 
+.swiper-pagination {
+  visibility: hidden;
+}
+
+@media (min-width: 1024px) {
+  .swiper-pagination {
+    visibility: visible;
+  }
+}
+
 
 

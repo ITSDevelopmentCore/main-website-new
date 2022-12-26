@@ -49,7 +49,7 @@ function Gallery() {
         },
       }}
       autoHeight={true}
-      slidesPerView={1.9}
+      slidesPerView={1.05}
       pagination={pagination}
       modules={[Pagination]}>
 
@@ -88,12 +88,7 @@ function Gallery() {
           result={<span>100.000 <Symbol symbol='₽' /></span>}
           qr={QrStub} />
       </SwiperSlide>
-      <SwiperSlide>
 
-        <div className="SWIPER_FIX_STUB w-[50px] h-[1px]">
-
-        </div>
-      </SwiperSlide>
 
     </Swiper>
   );

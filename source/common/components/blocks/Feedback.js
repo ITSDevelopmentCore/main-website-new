@@ -8,7 +8,8 @@ function Form() {
   return (
 
     <section className={
-      'mt-[270px] '
+      'mt-[100px] '
+      +'laptop:mt-[270px] '
       +'laptop:flex laptop:justify-between'}>
 
       <div className={

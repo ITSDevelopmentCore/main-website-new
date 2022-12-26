@@ -8,7 +8,14 @@ import CardWebApp from "./CardWebApp";
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-export default function Gallery(props) {
+export default function Gallery() {
+
+  const pagination = {
+    clickable: true,
+    renderBullet: function (index, className) {
+      return '<span class="w-8 h-8 bg-sky-500 rounded-[5px] ' + className + '"></span>';
+    },
+  };
   return (
     <Swiper
     effect={"coverflow"}
@@ -22,7 +29,7 @@ export default function Gallery(props) {
       modifier: 1,
       slideShadows: false,
     }}
-    pagination={true}
+    pagination={pagination}
     modules={[EffectCoverflow, Pagination]}
     >
       <SwiperSlide><CardWebApp/></SwiperSlide>

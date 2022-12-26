@@ -25,13 +25,17 @@
   background-size: contain;
 }
 
-.pagination-wrapper {
-    display: flex;
-    justify-content: center;
+.swiper-pagination {
+  position: absolute;
+  z-index: 20;
+  display: block;
+  justify-content: center;
+  bottom: -50px;
 }
-
 
 .swiper {
     margin: 0px 0px 27px 0px;
 }
+
+
 

@@ -8,12 +8,12 @@ import { RiApps2Fill } from 'react-icons/ri';
 import { BsGem } from 'react-icons/bs';
 import { SiMusicbrainz } from 'react-icons/si';
 import { RiServiceFill } from 'react-icons/ri';
-import Award from '../../assets/media/award.svg'
 
 /**
  * Imports: Components
  */
 import Symbol from '../../../common/components/view/Symbol';
+import CardAdvantageMobile from '../view/CardAdvantageMobile';
 
 export default function BlockAdvantages() {
 
@@ -22,8 +22,12 @@ export default function BlockAdvantages() {
         <>
             <div className="mt-[85px]">
 
-                <h2 className='text-title leading-title text-neutral-900 font-extrabold mb-12
-                           dark:text-white'>
+                <h2 className={'mb-12 '
+                    + 'text-[28px] leading-[32px] text-neutral-900 font-extrabold text-center  '
+                    + 'laptop:text-left laptop:text-[46px] laptop:leading-[52px] '
+                    + 'large:text-[58px] large:leading-[62px] '
+                    + 'desktop:text-[64px] desktop:leading-[72px] '
+                    + 'dark:text-white'}>
                     Преимущества
                 </h2>
 
@@ -71,26 +75,34 @@ export default function BlockAdvantages() {
             <div className='laptop:hidden'>
                 <div className="carousel p-4 space-x-4 bg-neutral rounded-box">
                     <div className="carousel-item">
-                        <img src="https://placeimg.com/250/180/arch" className="rounded-box" />
+                        <CardAdvantageMobile
+                            icon={<RiApps2Fill className='w-full h-full' />}
+                            title={<span><span className='text-sky-500'>60<Symbol symbol='+' /></span><br />проектов</span>}
+                            description={"Предприниматели по всей России и ближнему зарубежью доверяют нам."}>
+                        </CardAdvantageMobile>
                     </div>
                     <div className="carousel-item">
-                        <img src="https://placeimg.com/250/180/arch" className="rounded-box" />
+                        <CardAdvantageMobile
+                            icon={<RiApps2Fill className='w-full h-full' />}
+                            title={<span><span className='text-sky-500'>60<Symbol symbol='+' /></span><br />проектов</span>}
+                            description={"Предприниматели по всей России и ближнему зарубежью доверяют нам."}>
+                        </CardAdvantageMobile>
                     </div>
                     <div className="carousel-item">
-                        <img src="https://placeimg.com/250/180/arch" className="rounded-box" />
+                        <CardAdvantageMobile
+                            icon={<RiApps2Fill className='w-full h-full' />}
+                            title={<span><span className='text-sky-500'>60<Symbol symbol='+' /></span><br />проектов</span>}
+                            description={"Предприниматели по всей России и ближнему зарубежью доверяют нам."}>
+                        </CardAdvantageMobile>
                     </div>
                     <div className="carousel-item">
-                        <img src="https://placeimg.com/250/180/arch" className="rounded-box" />
+                        <CardAdvantageMobile
+                            icon={<RiApps2Fill className='w-full h-full' />}
+                            title={<span><span className='text-sky-500'>60<Symbol symbol='+' /></span><br />проектов</span>}
+                            description={"Предприниматели по всей России и ближнему зарубежью доверяют нам."}>
+                        </CardAdvantageMobile>
                     </div>
-                    <div className="carousel-item">
-                        <img src="https://placeimg.com/250/180/arch" className="rounded-box" />
-                    </div>
-                    <div className="carousel-item">
-                        <img src="https://placeimg.com/250/180/arch" className="rounded-box" />
-                    </div>
-                    <div className="carousel-item">
-                        <img src="https://placeimg.com/250/180/arch" className="rounded-box" />
-                    </div>
+
                 </div>
             </div>
         </>

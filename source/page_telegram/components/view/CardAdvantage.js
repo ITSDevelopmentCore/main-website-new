@@ -21,8 +21,8 @@ export default function CardAdvantage(props) {
 
                 <span className={
                     'w-14 h-14 '
-                    + 'laptop:w-[45px] laptop:h-[45px] '
-                    + 'large:w-[55px] large:h-[55px] '
+                    + 'laptop:absolute laptop:top-[40px] laptop:right-[40px] laptop:w-[80px] laptop:h-[80px] laptop:opacity-20 '
+                    + 'large:w-[55px] large:h-[55px] large:static large:opacity-100 '
                     + 'desktop:w-[65px] desktop:h-[65px] '
                     + 'text-sky-500'}>
                     {props.icon}

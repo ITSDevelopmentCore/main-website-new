@@ -115,7 +115,7 @@ export default function FeedbackForm() {
 
             <button className={
                 'mt-10 w-[280px] p-[20px] mx-auto '
-                + 'text-white rounded-lg text-[20px] font-bold shadow-blue  bg-gradient-to-t  from-sky-500 to-sky-300 dark:to-sky-500 transition-all duration-200 hover:shadow-blue-extended '
+                + 'text-white rounded-lg text-[20px] font-bold shadow-blue bg-gradient-to-t from-sky-500 to-sky-300 dark:to-sky-500 transition-all duration-200 hover:shadow-blue-extended '
                 + 'laptop:mx-0'}>
                 Отправить
             </button>

@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 import SwiperPortfolio from '../view/SwiperPortfolio'
 
 export default function BlockPortfolio(props) {
@@ -14,6 +15,7 @@ export default function BlockPortfolio(props) {
             </h2>
 
             <SwiperPortfolio />
+
 
         </section>
     )

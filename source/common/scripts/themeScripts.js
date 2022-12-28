@@ -2,7 +2,9 @@ import { changeThemeSwitcherState, hideDarkThemeModal } from "./changeViewByIdSc
 
 export function isDarkThemeEnabled()
 {
+    
     return document.documentElement.classList.contains('dark');
+   
 }
 
 export function setDarkTheme(enableDarkTheme)
@@ -10,6 +12,7 @@ export function setDarkTheme(enableDarkTheme)
     if (enableDarkTheme)
     {
         document.documentElement.classList.add('dark');
+    
     }
     else 
     {

@@ -1,6 +1,6 @@
 import React from "react";
-import Arrow from '../../assets/media/Arrow_home.svg';
-import CardImg from '../view/CardImg';
+
+import IllustrationPreview from '../../assets/media/illustration_preview.png'
 
 
 export default function BlockPreview() {

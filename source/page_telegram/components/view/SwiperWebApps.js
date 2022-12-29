@@ -18,24 +18,25 @@ export default function Gallery() {
   };
   return (
     <Swiper
-    effect={"coverflow"}
-    autoHeight={true}
-    centeredSlides={true}
-    slidesPerView={"auto"}
-    coverflowEffect={{
-      rotate: 50,
-      stretch: 700,
-      depth: 300,
-      modifier: 1,
-      slideShadows: false,
-    }}
-    pagination={pagination}
-    modules={[EffectCoverflow, Pagination]}
+    className={'hidden laptop:block'}
+      effect={"coverflow"}
+      autoHeight={true}
+      centeredSlides={true}
+      slidesPerView={"auto"}
+      coverflowEffect={{
+        rotate: 50,
+        stretch: 700,
+        depth: 300,
+        modifier: 1,
+        slideShadows: false,
+      }}
+      pagination={pagination}
+      modules={[EffectCoverflow, Pagination]}
     >
-      <SwiperSlide><CardWebApp/></SwiperSlide>
-      <SwiperSlide><CardWebApp/></SwiperSlide>
-      <SwiperSlide><CardWebApp/></SwiperSlide>
-      <SwiperSlide><CardWebApp/></SwiperSlide>
+      <SwiperSlide><CardWebApp /></SwiperSlide>
+      <SwiperSlide><CardWebApp /></SwiperSlide>
+      <SwiperSlide><CardWebApp /></SwiperSlide>
+      <SwiperSlide><CardWebApp /></SwiperSlide>
 
     </Swiper>
   );

@@ -1,11 +1,6 @@
 import React from 'react';
 
 /**
- * Imports : Utils
- */
-import Symbol from '../../../common/components/view/Symbol';
-
-/**
  * Imports : Icons
  */
 import { RiApps2Fill } from 'react-icons/ri';
@@ -14,7 +9,8 @@ export default function CardBonus(props) {
 
     return (
         <section className={
-            'w-[717px] h-[289px] px-12 pt-12 relative '
+            'w-full p-12 relative '
+            + 'laptop:w-[717px] laptop:h-[289px]'
             + 'bg-white rounded-card '
             + 'dark:bg-card-surface dark:border dark:border-slate-800'}>
 

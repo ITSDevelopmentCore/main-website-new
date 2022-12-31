@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useState, createContext } from "react"
 import * as ReactDOM from 'react-dom/client';
 
 /**
@@ -20,52 +20,80 @@ import BlockStages from "../components/blocks/BlockStages";
 import BlockPortfolio from "../components/blocks/BlockPortfolio";
 
 import { CookiesProvider, useCookies } from "react-cookie";
-import { setDarkTheme } from "../../common/scripts/themeScripts";
+import { applyTailwindDarkTheme, isTailwindDarkThemeEnabled } from "../../common/scripts/themeScripts";
 import { showDarkThemeModal } from "../../common/scripts/changeViewByIdScripts";
+
+
+let root = document.getElementById("root");
+let reactDom = ReactDOM.createRoot(root)
+reactDom.render(
+    <CookiesProvider>
+        <App />
+    </CookiesProvider>
+)
 
 function App() {
     const [cookies, setCookie] = useCookies(["user"]);
+    const [theme, setTheme] = useState('light')
+
+    const callbacks = {
+        callbackThemeChange: callbackChangeThemeImpl,
+    }
 
     useEffect(() => {
-        if (cookies.theme == 'dark') {
-            setDarkTheme(true);
-        }
-        else {
-            setDarkTheme(false);
-        }
+        workWithFirstVisit();
+        workWithTheme();
+    })
 
+    return (
+        <>
+            <Header
+                theme={theme}
+                callbackThemeChange={callbackChangeThemeImpl} />
+            <main>
+                <ModalDarkTheme
+                    theme={theme}
+                    callbackThemeChange={callbackChangeThemeImpl} />
+                <Preview />
+                <BlockAdvantages />
+                <BlockWebApps />
+                <BlockStages />
+                <BlockPortfolio />
+                <Feedback />
+            </main>
+            <Footer />
+        </>
+    )
+
+    function workWithFirstVisit() {
         if (cookies.firstVisit == undefined) {
             const timer = setTimeout(() => {
                 showDarkThemeModal();
             }, 3000);
             setCookie('firstVisit', false);
         }
-    })
+    }
 
-    return (
-        <main>
-            <ModalDarkTheme />
+    function workWithTheme() {
+        if (cookies.theme == 'dark') {
+            applyTailwindDarkTheme(true);
+            setTheme('dark')
+        }
+    }
 
-            <Header />
-            <Preview />
-            <BlockAdvantages />
-            <BlockWebApps />
-            <BlockStages />
-            <BlockPortfolio />
-            <Feedback />
-            <Footer />
-        </main>)
+    function callbackChangeThemeImpl(toDarkMode) {
+        if (toDarkMode) {
+            applyTailwindDarkTheme(true);
+            setCookie('theme', 'dark');
+            setTheme('dark');
+        } else {
+            applyTailwindDarkTheme(false);
+            setCookie('theme', 'light');
+            setTheme('light');
+        }
+    }
+
 }
 
-initialize();
 
-function initialize() {
-    let root = document.getElementById("root");
-    let reactDom = ReactDOM.createRoot(root)
-    reactDom.render(
-        <CookiesProvider>
-            <App />
-        </CookiesProvider>
-    )
-}
 

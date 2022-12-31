@@ -16,7 +16,7 @@ import BlockServices from "../components/blocks/BlockServices";
 import BlockNews from "../components/blocks/BlockNews";
 
 import { CookiesProvider, useCookies } from "react-cookie";
-import { setDarkTheme } from "../../common/scripts/themeScripts";
+import { applyTailwindDarkTheme } from "../../common/scripts/themeScripts";
 import { showDarkThemeModal } from "../../common/scripts/changeViewByIdScripts";
 
 
@@ -25,10 +25,10 @@ function App() {
 
     useEffect(() => {
         if (cookies.theme == 'dark') {
-            setDarkTheme(true);
+            applyTailwindDarkTheme(true);
         }
         else {
-            setDarkTheme(false);
+            applyTailwindDarkTheme(false);
         }
 
         if (cookies.firstVisit == undefined) {

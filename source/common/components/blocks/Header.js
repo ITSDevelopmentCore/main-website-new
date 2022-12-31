@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 /**
  * Imports : Media
@@ -14,21 +14,26 @@ import Symbol from '../view/Symbol';
 import DropdownMenu from "../view/DropdownMenu";
 import ThemeSwitcher from "../view/ThemeSwitcher";
 
-/**
- * Imports: Scripts
- */
-import { isDarkThemeEnabled } from "../../scripts/themeScripts";
 
-export default function Header() {
+export default function Header(props) {
+
+    useEffect(() => {
+        console.log(props.theme)
+        })
 
     return (
-        <header className="flex justify-between items-center py-[60px]">
+        <header className={
+            'flex justify-between items-center py-[10px] '
+            + 'laptop:py-[36px] '
+            + 'desktop:py-[60px] '} >
 
             <div className="flex items-center">
 
                 <div className={
-                    'desktop:mr-28 laptop:mr-14 '
-                    + 'font-bold text-3xl'}>
+                    'laptop:mr-14 '
+                    + 'font-bold text-[30px] leading-[46px] '
+                    + 'laptop:text-[32px] laptop:leading-[48px] '
+                    + 'desktop:mr-28 '}>
                     <span className="dark:text-white text-neutral-900">its.</span>
                     <span className="text-sky-500">dev</span>
                 </div>
@@ -61,7 +66,7 @@ export default function Header() {
                                 {
                                     title: "Мобильная разработка",
                                     link: "./development.html"
-                                }, 
+                                },
                                 {
                                     title: "Web разработка",
                                     link: "./development.html"
@@ -111,16 +116,36 @@ export default function Header() {
 
 
                 <div className={'hidden large:flex items-center ml-[56px]'}>
-                
-                    <ThemeSwitcher/>
 
-                    <img src={isDarkThemeEnabled() ? IcMenuDark : IcMenuLight} className={'laptop:hidden '} />
+                    <ThemeSwitcher
+                    theme = {props.theme}
+                    changeThemeHandler = {props.changeThemeHandler }/>
+
+                    <img src={props.theme == 'dark' ? IcMenuDark : IcMenuLight} className={'laptop:hidden '} />
 
                 </div>
 
+
+                <label class={
+                    'swap swap-rotate '
+                    + 'laptop:hidden '}>
+
+                    <input type="checkbox" />
+
+                    <svg class="swap-off" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512">
+                        <path fill="#0ea5e9" d="M64,128 H448 V87 H64 Z" />
+                        <path fill={props.theme === 'dark' ? 'text-white' : 'text-neutral-900'} d="M64,248 H448 V203 H64 Z" />
+                        <path fill={props.theme === 'dark' ? 'text-white' : 'text-neutral-900'} d="M64,384 H448 V341 H64 Z" />
+                    </svg>
+
+                    <svg class="swap-on fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><polygon points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49" /></svg>
+
+                </label>
+
+
             </div>
 
-        </header>
+        </ header>
     );
 
 }

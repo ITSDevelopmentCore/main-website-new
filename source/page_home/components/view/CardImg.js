@@ -7,7 +7,7 @@ import TimeworkDark from '../../assets/media/2019-imgDark.png';
 import PlanetDark from '../../assets/media/Rus&euroDark.png';
 import ProjectsDark from '../../assets/media/50projectsDark.png';
 import DigitalDark from '../../assets/media/DigitalDark.png';
-import { isDarkThemeEnabled } from "../../../common/scripts/themeScripts";
+import { isTailwindDarkThemeEnabled } from "../../../common/scripts/themeScripts";
 
 
 export default function CardImg() {
@@ -27,7 +27,7 @@ export default function CardImg() {
            bg-white rounded-[50px] 
 dark:bg-slate-800">
                     <img className={' pl-[46px] pt-[25%]'}
-                        src={isDarkThemeEnabled() ? TimeworkDark : TimeworkLight} />
+                        src={isTailwindDarkThemeEnabled() ? TimeworkDark : TimeworkLight} />
                 </div>
                 <div className="w-[343px] h-[118px] border-2 rounded-[100px] ">
                     <p className="text-xl font-bold pt-[45px] pb-[47px] pl-[63px]">
@@ -40,7 +40,7 @@ dark:bg-slate-800">
                 bg-white rounded-[50px]
 dark:bg-slate-800">
                     <img className="pt-[15%] pl-[7px]"
-                        src={isDarkThemeEnabled() ? PlanetDark : PlanetLight} />
+                        src={isTailwindDarkThemeEnabled() ? PlanetDark : PlanetLight} />
 
                 </div>
                 <div className="w-[343px] h-[118px] border-2 rounded-[100px] ">
@@ -54,7 +54,7 @@ dark:bg-slate-800">
                 bg-white rounded-[50px]
 dark:bg-slate-800">
                     <img className="pt-[20%] pl-[15px]"
-                        src={isDarkThemeEnabled() ? ProjectsDark : ProjectsLight} />
+                        src={isTailwindDarkThemeEnabled() ? ProjectsDark : ProjectsLight} />
                 </div>
                 <div className="w-[343px] h-[118px]
                 border-2 rounded-[100px] ">
@@ -69,7 +69,7 @@ dark:bg-slate-800">
                  bg-white rounded-[50px]
 dark:bg-slate-800">
                     <img className="p-[15%]"
-                        src={isDarkThemeEnabled() ? DigitalDark : DigitalLight} />
+                        src={isTailwindDarkThemeEnabled() ? DigitalDark : DigitalLight} />
                 </div>
                 <div className="w-[343px] leading-[19px] 
                 border-2 rounded-[100px]">

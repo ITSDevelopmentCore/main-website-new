@@ -8,7 +8,7 @@ import { BsMoonStarsFill } from 'react-icons/bs';
 /**
  * Imports : Scripts
  */
-import { setDarkTheme } from "../../scripts/themeScripts";
+import { applyTailwindDarkTheme } from "../../scripts/themeScripts";
 import useCookies from 'react-cookie/cjs/useCookies';
 
 
@@ -18,13 +18,13 @@ function DarkThemeModal() {
 
     function positiveClick()
     {
-        setDarkTheme(true);
+        applyTailwindDarkTheme(true);
         setCookie('theme', 'dark');
     }
 
     function negativeClick()
     {
-        setDarkTheme(false);
+        applyTailwindDarkTheme(false);
         setCookie('theme', 'light');
     }
 

@@ -14,5 +14,4 @@ export function hideDarkThemeModal() {
 export function showDarkThemeModal() {
     document.getElementById('modal-dark-theme').classList.add('fixed');
     document.getElementById('modal-dark-theme').classList.remove('hidden');
-
 }

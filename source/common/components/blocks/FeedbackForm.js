@@ -76,7 +76,7 @@ export default function FeedbackForm() {
 
                     <label
                         className="flex mb-5 items-center"
-                        for='linkedByOuterLabel'>
+                        htmlFor='linkedByOuterLabel'>
 
                             <img className={
                                 'mr-5 '

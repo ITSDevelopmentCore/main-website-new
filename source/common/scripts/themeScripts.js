@@ -2,9 +2,7 @@ import { changeThemeSwitcherState, hideDarkThemeModal } from "./changeViewByIdSc
 
 export function isTailwindDarkThemeEnabled()
 {
-    
     return document.documentElement.classList.contains('dark');
-   
 }
 
 export function applyTailwindDarkTheme(enableDarkTheme)

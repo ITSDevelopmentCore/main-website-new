@@ -12,10 +12,10 @@ function CardPortfolio(props) {
 
 
             <div className='laptop:hidden flex justify-center items-start'>
-                <div class="mockup-phone border-primary h-[600px] aspect-[1/2] scale-[0.6] -mt-[120px]">
-                    <div class="camera"></div>
-                    <div class="display">
-                        <div class="bg-white w-full h-full"></div>
+                <div className="mockup-phone border-primary h-[600px] aspect-[1/2] scale-[0.6] -mt-[120px]">
+                    <div className="camera"></div>
+                    <div className="display">
+                        <div className="bg-white w-full h-full"></div>
                     </div>
                 </div>
             </div>
@@ -92,10 +92,10 @@ function CardPortfolio(props) {
             <div className={
                 'hidden '
                 + 'laptop:flex laptop:justify-center laptop:items-center '}>
-                <div class="mockup-phone border-primary h-[595px] aspect-[1/2] ">
-                    <div class="camera"></div>
-                    <div class="display">
-                        <div class="bg-white w-full h-full"></div>
+                <div className="mockup-phone border-primary h-[595px] aspect-[1/2] ">
+                    <div className="camera"></div>
+                    <div className="display">
+                        <div className="bg-white w-full h-full"></div>
                     </div>
                 </div>
             </div>

@@ -30,13 +30,13 @@ function DarkThemeModal() {
 
     return (
         
-        <div id='modal-dark-theme' class={"modal-box hidden right-5 bottom-5 z-10 bg-card-surface border border-slate-800 text-white overflow-hidden"}>
+        <div id='modal-dark-theme' className={"modal-box hidden right-5 bottom-5 z-10 bg-card-surface border border-slate-800 text-white overflow-hidden"}>
             <BsMoonStarsFill className='text-blue-400 absolute h-full w-full -z-[1]'/>
-            <h3 class="font-bold text-lg">За окном уже темно</h3>
-            <p class="py-4">Включим ночную тему?</p>
-            <div class="modal-action">
-                <label for="my-modal" class="btn" onClick={() => positiveClick()}>Да</label>
-                <label for="my-modal" class="btn" onClick={() => negativeClick()}>Нет</label>
+            <h3 className="font-bold text-lg">За окном уже темно</h3>
+            <p className="py-4">Включим ночную тему?</p>
+            <div className="modal-action">
+                <label htmlFor="my-modal" className="btn" onClick={() => positiveClick()}>Да</label>
+                <label htmlFor="my-modal" className="btn" onClick={() => negativeClick()}>Нет</label>
             </div>
         </div>
     )

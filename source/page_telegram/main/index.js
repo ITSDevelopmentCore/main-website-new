@@ -1,4 +1,4 @@
-import React, { useEffect, useState, createContext } from "react"
+import React, { useEffect, useState, createContext, useContext } from "react"
 import * as ReactDOM from 'react-dom/client';
 
 /**
@@ -20,9 +20,8 @@ import BlockStages from "../components/blocks/BlockStages";
 import BlockPortfolio from "../components/blocks/BlockPortfolio";
 
 import { CookiesProvider, useCookies } from "react-cookie";
-import { applyTailwindDarkTheme, isTailwindDarkThemeEnabled } from "../../common/scripts/themeScripts";
+import { applyTailwindDarkTheme } from "../../common/scripts/themeScripts";
 import { showDarkThemeModal } from "../../common/scripts/changeViewByIdScripts";
-
 
 let root = document.getElementById("root");
 let reactDom = ReactDOM.createRoot(root)
@@ -36,24 +35,16 @@ function App() {
     const [cookies, setCookie] = useCookies(["user"]);
     const [theme, setTheme] = useState('light')
 
-    const callbacks = {
-        callbackThemeChange: callbackChangeThemeImpl,
-    }
-
     useEffect(() => {
         workWithFirstVisit();
         workWithTheme();
     })
 
     return (
-        <>
-            <Header
-                theme={theme}
-                callbackThemeChange={callbackChangeThemeImpl} />
+        <ThemeContext.Provider value={{theme, changeThemeCallback}}>
+            <Header />
             <main>
-                <ModalDarkTheme
-                    theme={theme}
-                    callbackThemeChange={callbackChangeThemeImpl} />
+                <ModalDarkTheme />
                 <Preview />
                 <BlockAdvantages />
                 <BlockWebApps />
@@ -62,14 +53,24 @@ function App() {
                 <Feedback />
             </main>
             <Footer />
-        </>
+        </ThemeContext.Provider>
     )
+
+    function changeThemeCallback(changedToDark) {
+        if (changedToDark) {
+            setCookie('theme', 'dark');
+            setTheme('dark');
+            applyTailwindDarkTheme(true);
+        } else {
+            setCookie('theme', 'light');
+            setTheme('light');
+            applyTailwindDarkTheme(false);
+        }
+    }
 
     function workWithFirstVisit() {
         if (cookies.firstVisit == undefined) {
-            const timer = setTimeout(() => {
-                showDarkThemeModal();
-            }, 3000);
+            setTimeout(() => { showDarkThemeModal() }, 3000);
             setCookie('firstVisit', false);
         }
     }
@@ -81,19 +82,6 @@ function App() {
         }
     }
 
-    function callbackChangeThemeImpl(toDarkMode) {
-        if (toDarkMode) {
-            applyTailwindDarkTheme(true);
-            setCookie('theme', 'dark');
-            setTheme('dark');
-        } else {
-            applyTailwindDarkTheme(false);
-            setCookie('theme', 'light');
-            setTheme('light');
-        }
-    }
-
 }
 
-
-
+export const ThemeContext = React.createContext();

@@ -33,7 +33,8 @@ export default function FeedbackForm() {
                     <input
                         className={
                             'w-full h-[70px] p-6 mb-6 '
-                            + 'font-sans font-semibold rounded-lg focus:outline-none focus:border-2 focus:border-sky-500 caret-sky-500 '
+                            + 'font-sans opacity-50 rounded-lg focus:outline-none focus:border-2 focus:border-sky-500 caret-sky-500 '
+                            + 'laptop:font-semibold '
                             + 'dark:bg-slate-800 dark:text-white'}
                         type='tel'
                         placeholder='7 999 999 99 99'
@@ -47,7 +48,8 @@ export default function FeedbackForm() {
                     <input
                         className={
                             'w-full h-[70px] p-6 mb-6 '
-                            + 'font-sans font-semibold rounded-lg focus:outline-none focus:border-2 focus:border-sky-500 caret-sky-500 '
+                            + 'font-sans opacity-50 rounded-lg focus:outline-none focus:border-2 focus:border-sky-500 caret-sky-500 '
+                            + 'laptop:font-semibold '
                             + 'dark:bg-slate-800'}
                         placeholder="Иван"
                         name="name" />
@@ -64,7 +66,8 @@ export default function FeedbackForm() {
                     <input
                         className={
                             'w-full h-[70px] p-6 mb-6 '
-                            + 'font-sans font-semibold rounded-lg focus:outline-none focus:border-2 focus:border-sky-500 caret-sky-500 '
+                            + 'font-sans opacity-50 rounded-lg focus:outline-none focus:border-2 focus:border-sky-500 caret-sky-500 '
+                            + 'laptop:font-semibold '
                             + 'dark:bg-slate-800'}
                         placeholder="my@gmail.com"
                         name="email" />
@@ -78,22 +81,21 @@ export default function FeedbackForm() {
                         className="flex mb-5 items-center"
                         htmlFor='linkedByOuterLabel'>
 
-                            <img className={
-                                'mr-5 '
-                                + 'cursor-pointer rounded-lg'}
-                                src={IcTechTask}>
-                            </img>
+                        <img className={
+                            'w-[45px] h-[45px] mr-5 '
+                            + 'cursor-pointer rounded-lg'}
+                            src={IcTechTask}>
+                        </img>
 
-                            <input
-                                className="hidden"
-                                type="file"
-                                id="linkedByOuterLabel"
-                                accept=".doc, .txt, .pdf"
-                                onChange={(e) => extractFileName(e)}
-                                name="techtask" />
+                        <input
+                            className="hidden"
+                            type="file"
+                            id="linkedByOuterLabel"
+                            accept=".doc, .txt, .pdf"
+                            onChange={(e) => extractFileName(e)}
+                            name="techtask" />
 
-
-                        <div className="text-[16px] grow dark:text-white">{file}</div>
+                        <div className="text-[14] leading-[16px] grow dark:text-white">{file}</div>
 
                     </label>
 
@@ -109,14 +111,15 @@ export default function FeedbackForm() {
             <textarea
                 className={
                     'w-full h-[140px] pb-[90px] p-6 '
-                    + 'font-sans font-semibold rounded-lg focus:outline-none focus:border-2 focus:border-sky-500 caret-sky-500 scrollbar-hide '
+                    + 'font-sans rounded-lg opacity-50 focus:outline-none focus:border-2 focus:border-sky-500 caret-sky-500 scrollbar-hide '
+                    + 'laptop:font-semibold '
                     + 'dark:bg-slate-800'}
                 placeholder="Или опишите Ваш проект" />
 
             <button className={
-                'mt-10 w-[280px] p-[20px] mx-auto '
-                + 'text-white rounded-lg text-[20px] font-bold shadow-blue bg-gradient-to-t from-sky-500 to-sky-300 dark:to-sky-500 transition-all duration-200 hover:shadow-blue-extended '
-                + 'laptop:mx-0'}>
+                'mt-10 w-[170px] p-[10px] mx-auto '
+                + 'text-white rounded-lg text-[14px] leading-[20px] font-bold shadow-blue bg-gradient-to-t from-sky-500 to-sky-300 dark:to-sky-500 transition-all duration-200 hover:shadow-blue-extended '
+                + 'laptop:mx-0 laptop:w-[280px]'}>
                 Отправить
             </button>
 

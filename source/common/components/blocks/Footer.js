@@ -12,7 +12,7 @@ function Footer(props) {
   const scrollButtonHandler = () => { window.scrollTo({ top: 0, left: 0, behavior: 'smooth' }) };
 
   return (
-    <footer className="mt-[180px] pb-[40px]">
+    <footer className="pb-[40px]">
 
       <div className="flex justify-center laptop:justify-between">
 

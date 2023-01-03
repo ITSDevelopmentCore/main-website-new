@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 /**
  * Imports : Media
@@ -12,13 +12,14 @@ import IcBurger from '../../assets/icons/IcBurger';
 import Symbol from '../view/Symbol';
 import DropdownMenu from "../view/DropdownMenu";
 import ThemeSwitcher from "../view/ThemeSwitcher";
+import DropdownMenuMobile from "../view/DropdownMenuMobile";
 
 
 export default function Header() {
 
     return (
         <header className={
-            'flex justify-between items-center py-[10px] '
+            'flex justify-between items-center py-[10px] relative '
             + 'laptop:py-[36px] '
             + 'desktop:py-[60px] '} >
 
@@ -109,25 +110,13 @@ export default function Header() {
 
                 </div>
 
-
                 <div className={'hidden large:flex items-center ml-[56px]'}>
-
                     <ThemeSwitcher />
-
                 </div>
 
+                <IcBurger />
 
-                <label className={
-                    'swap swap-rotate '
-                    + 'laptop:hidden '}>
-
-                    <input type="checkbox" />
-
-                   <IcBurger />
-
-                    <svg className="swap-on fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><polygon points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49" /></svg>
-
-                </label>
+                <DropdownMenuMobile/>
 
 
             </div>

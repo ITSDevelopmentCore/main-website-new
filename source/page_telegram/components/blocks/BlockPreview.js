@@ -1,8 +1,15 @@
-import React from "react"
+/**
+ * Imports : React
+ */
+import React from "react";
 import Symbol from "../../../common/components/view/Symbol";
 
+/**
+ * Imports : Media
+ */
 
-import IllustrationMobileMockupDouble from '../../assets/media/illustration-mobile-mockup-double.png'
+import IllustrationMobileMockupDouble from '../../assets/media/illustration-mobile-mockup-double.png';
+import MockupGIF from '../../assets/media/video/mockup.gif';
 
 export default function BlockPreview() {
 
@@ -64,8 +71,8 @@ export default function BlockPreview() {
                     + 'large:w-[300px] '
                     + 'desktop:w-[330px] '}>
                     <div className="camera"></div>
-                    <div className="display">
-                        <div className="w-full h-full bg-white"></div>
+                    <div className="display h-full rounded-[20px] ">
+                        <img src={MockupGIF} className={'h-full'}/>
                     </div>
                 </div>
 

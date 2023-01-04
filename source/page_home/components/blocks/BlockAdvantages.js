@@ -25,16 +25,20 @@ export default function BlockAdvantages() {
             'mt-[185px] '
         }>
 
+
             <h2 className={
                 'mb-[55px] '
-                + 'text-[28px] leading-[32px] font-extrabold text-center '
-                + 'laptop:text-[75px] laptop:leading-[85px] laptop:text-left '
-                + 'desktop:text-[95px] desktop:leading-[105px]'}>
+                + 'text-[28px] leading-[42px] font-extrabold text-center '
+                + 'laptop:text-[46px] laptop:leading-[52px] laptop:text-left laptop:w-[300px] '
+                + 'large:text-[58px] large:leading-[66px] '
+                + 'desktop:text-[64px] desktop:leading-[72px]'}>
                 its.dev
                 <FiArrowDownRight className="text-sky-500 inline-block" />
             </h2>
 
-            <div className={'flex flex-col space-y-[30px] '}>
+            <div className={
+                'flex flex-col space-y-[30px] '
+                + 'laptop:flex-row laptop:space-x-[30px] laptop:space-y-0 '}>
 
                 <CardAdvantage
                     imageLight={IllustrationAdvantagesYearLight}
@@ -51,7 +55,7 @@ export default function BlockAdvantages() {
                 <CardAdvantage
                     imageLight={IllustrationAdvantagesTempLight}
                     imageDark={IllustrationAdvantagesTempDark}
-                    title={'Самые высокие темпы развития среди Digital агенств по версии “Рейтинг рунета”'} />
+                    title={'Лидирующие позиции по признанным рейтингам'} />
 
             </div>
 

@@ -25,14 +25,6 @@ module.exports = {
         'card-surface': '#1A232C'
       },
 
-      fontSize: {
-        'title': '64px',
-      },
-
-      lineHeight: {
-        'title': '73px',
-      },
-
       borderRadius: {
         'card': '50px',
       }
@@ -48,8 +40,9 @@ module.exports = {
 
   },
 
-  plugins: [require("daisyui"),
-  require('tailwind-scrollbar-hide')
+  plugins: [
+    require("daisyui"),
+    require('tailwind-scrollbar-hide')
   ],
 
 

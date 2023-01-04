@@ -34,7 +34,7 @@ export default function BlockPreview() {
 
                     <h1 className={
                         'font-extrabold text-center text-[35px] leading-[45px] mb-[45px] '
-                        + 'laptop:text-[45px] laptop:leading-[55px] laptop:text-left '
+                        + 'laptop:text-[50px] laptop:leading-[55px] laptop:text-left '
                         + 'large:text-[75px] large:leading-[85px] '
                         + 'desktop:text-[95px] desktop:leading-[105px]'}>
 
@@ -55,9 +55,10 @@ export default function BlockPreview() {
                     </p>
 
                     <button className={
-                        'p-5 px-11 w-max mx-auto -mb-[80px] '
+                        'py-[19px] px-[46px] w-max mx-auto -mb-[80px] '
                         + 'leading-[30px] font-bold text-white shadow-blue rounded-xl bg-gradient-to-t from-sky-500 to-sky-300 transition-all duration-200 hover:shadow-blue-extended '
                         + 'laptop:text-[19px] laptop:mx-0 laptop:mb-0 '
+                        + 'large:py-[17px] large:px-[41px] '
                         + 'desktop:text-[22px] desktop:leading-[33px] '
                         + 'dark:to-sky-500'}>
                         Свяжитесь со мной
@@ -72,7 +73,7 @@ export default function BlockPreview() {
                     + 'desktop:w-[330px] '}>
                     <div className="camera"></div>
                     <div className="display h-full rounded-[20px] ">
-                        <img src={MockupGIF} className={'h-full'}/>
+                        <img src={MockupGIF} className={'h-full w-full'}/>
                     </div>
                 </div>
 

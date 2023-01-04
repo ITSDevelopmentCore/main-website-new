@@ -23,39 +23,49 @@ export default function BlockServices() {
             <h2 className={
                 'mb-[10px] '
                 + 'text-[28px] leading-[42px] font-extrabold text-center '
-                + 'laptop:text-[75px] laptop:leading-[85px] laptop:text-left '
-                + 'desktop:text-[95px] desktop:leading-[105px]'}>
+                + 'laptop:text-[46px] laptop:leading-[52px] laptop:text-left laptop:mb-[20px] laptop:w-[300px] '
+                + 'large:text-[58px] large:leading-[66px] '
+                + 'desktop:text-[64px] desktop:leading-[72px]'}>
                 Услуги
             </h2>
 
             <p className={
-                'w-full mb-[50px] '
-                + 'text-center text-[12px] leading-[16px] opacity-60 '
-                + 'laptop:w-[722px] laptop:text-left '}>
+                'mb-[50px] '
+                + 'text-center opacity-60 '
+                + 'laptop:text-left laptop:w-[300px] '}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
             </p>
 
-            <div className={'flex flex-col space-y-[15px] '}>
+            <div className={'flex flex-col space-y-[15px] '
+        +'laptop:space-y-[40px]'}>
 
-                <CardService
-                    title={'Mobile разработка'}
-                    description={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'}
-                    image={IllustrationServiceMobile} />
+                <div className={
+                    'flex flex-col laptop:flex-row laptop:justify-end laptop:space-x-[50px] laptop:space-y-0 space-y-[15px] '
+                }>
+                    <CardService
+                        title={'Mobile разработка'}
+                        description={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'}
+                        image={IllustrationServiceMobile} />
 
-                <CardService
-                    title={'Web разработка'}
-                    description={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'}
-                    image={IllustrationServiceWeb} />
+                    <CardService
+                        title={'Web разработка'}
+                        description={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'}
+                        image={IllustrationServiceWeb} />
+                </div>
 
-                <CardService
-                    title={'Telegram разработка'}
-                    description={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'}
-                    image={IllustrationServiceTelegram} />
+                <div className={
+                    'flex flex-col laptop:flex-row laptop:justyfy-start laptop:space-x-[50px] laptop:space-y-0 space-y-[15px] '
+                }>
+                    <CardService
+                        title={'Telegram разработка'}
+                        description={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'}
+                        image={IllustrationServiceTelegram} />
 
-                <CardService
-                    title={'Startup MVP'}
-                    description={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'}
-                    image={IllustrationServiceMVP} />
+                    <CardService
+                        title={'Startup MVP'}
+                        description={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'}
+                        image={IllustrationServiceMVP} />
+                </div>
 
             </div>
 

@@ -32,12 +32,12 @@ export default function BlockNews() {
                 + 'bg-white rounded-[20px] '
                 + 'dark:bg-card-surface dark:border dark:border-slate-800'}>
 
-                <h4 className="flex justify-start items-center">
+                <h4 className="flex justify-start items-center space-x-[10px]">
                     <IcYoutube />
-                    <span className="ml-[10px]">Видеоблог</span>
+                    <span className="text-[14px]">Видеоблог</span>
                 </h4>
 
-                <p className={'text-[12px] leading-[17px] opacity-60 '}>
+                <p className={'opacity-60'}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                     labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
                 </p>

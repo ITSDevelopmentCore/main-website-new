@@ -1,13 +1,16 @@
+/**
+ * Imports : React
+ */
 import React from "react";
 
 /**
- * Imports : Media
+ * Imports : media
  */
 import { BsFillTelephoneFill } from 'react-icons/bs';
 import IcBurger from '../../assets/icons/IcBurger';
 
 /**
- * Imports : View
+ * Imports : components
  */
 import Symbol from '../view/Symbol';
 import DropdownMenu from "../view/DropdownMenu";
@@ -15,7 +18,13 @@ import ThemeSwitcher from "../view/ThemeSwitcher";
 import DropdownMenuMobile from "../view/DropdownMenuMobile";
 
 
-export default function Header() {
+function Header() {
+
+    const buttonClickHandler = () => {
+        document.getElementById('feedback').scrollIntoView({
+            behavior: 'smooth'
+        });
+    }
 
     return (
         <header className={
@@ -45,11 +54,11 @@ export default function Header() {
                             items={[
                                 {
                                     title: "О нас",
-                                    link: "./development.html"
+                                    link: "http://127.0.0.1:5500/build/html/home.html"
                                 },
                                 {
                                     title: "Вакансии и карьера",
-                                    link: "./development.html"
+                                    link: "http://127.0.0.1:5500/build/html/development.html"
                                 }
                             ]} />
                         <DropdownMenu
@@ -57,27 +66,27 @@ export default function Header() {
                             items={[
                                 {
                                     title: "Telegram",
-                                    link: "./development.html"
+                                    link: "http://127.0.0.1:5500/build/html/telegram.html"
                                 },
                                 {
                                     title: "Мобильная разработка",
-                                    link: "./development.html"
+                                    link: "http://127.0.0.1:5500/build/html/development.html"
                                 },
                                 {
                                     title: "Web разработка",
-                                    link: "./development.html"
+                                    link: "http://127.0.0.1:5500/build/html/development.html"
                                 },
                                 {
                                     title: "Startup MVP",
-                                    link: "./development.html"
+                                    link: "http://127.0.0.1:5500/build/html/development.html"
                                 },
                             ]} />
                         <DropdownMenu
                             title="Решения"
                             items={[
                                 {
-                                    title: "Bot Systems",
-                                    link: "./development.html"
+                                    title: "Bot System",
+                                    link: "http://127.0.0.1:5500/build/html/development.html"
                                 }
                             ]} />
                     </ul>
@@ -95,7 +104,8 @@ export default function Header() {
 
                     <BsFillTelephoneFill className="text-sky-500 w-6 h-6 mr-2" />
 
-                    <div className="mr-[52px] dark:text-white">
+                    <a href="tel:89122486136"
+                       className="mr-[52px]">
                         <Symbol symbol="+" />
                         7
                         <Symbol symbol=" " />
@@ -104,9 +114,13 @@ export default function Header() {
                         <Symbol symbol=")" />
                         <Symbol symbol=" " />
                         999-99-99
-                    </div>
-                    <button className="text-[14px] laptop:text-[16px] large:text-[18px] btn btn-active rounded-lg bg-sky-500 text-white py-3 px-5 hover:bg-sky-400 border-none transition-all normal-case	">Связаться с нами</button>
+                    </a>
 
+                    <button
+                        onClick={buttonClickHandler}
+                        className="text-[14px] laptop:text-[16px] large:text-[18px] btn btn-active rounded-lg bg-sky-500 text-white py-3 px-5 hover:bg-sky-400 border-none transition-all normal-case">
+                        Связаться с нами
+                    </button>
 
                 </div>
 
@@ -116,8 +130,7 @@ export default function Header() {
 
                 <IcBurger />
 
-                <DropdownMenuMobile/>
-
+                <DropdownMenuMobile />
 
             </div>
 
@@ -125,3 +138,5 @@ export default function Header() {
     );
 
 }
+
+export default Header;

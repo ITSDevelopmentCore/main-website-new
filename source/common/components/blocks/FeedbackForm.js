@@ -30,25 +30,27 @@ function FeedbackForm() {
             className={'grow flex flex-col'}
             action='https://submit-form.com/F8bMh3aV'>
 
+            {/* Скрытый инпут, использующийся для редиректа в Formspark */}
             <input
                 type="hidden"
                 name="_redirect"
-                value="http://127.0.0.1:5500/build/html/telegram.html"
-            />
+                value="http://127.0.0.1:5500/build/html/telegram.html" />
 
             <div className={'large:flex large:space-x-[50px]'}>
 
                 <div className="basis-1/2">
 
-                    <p className={'mb-[10px] text-[16px] leading-[30px] '
-                        + 'laptop:mb-[14px] laptop:text-[20px] laptop:leading-[38px]'}>
+                    <p className={
+                        'mb-[10px] '
+                        + 'text-[16px] leading-[30px] '
+                        + 'laptop:text-[20px] laptop:leading-[38px] laptop:mb-[14px] '}>
                         Номер телефона <span className="text-red-400"><Symbol symbol='*' /></span>
                     </p>
 
                     <input
                         className={
                             'w-full h-[70px] p-6 mb-6 '
-                            + 'font-sans rounded-lg opacity-50 focus:outline-none focus:border-2 focus:border-sky-500 caret-sky-500 scrollbar-hide '
+                            + 'font-sans rounded-lg opacity-50 focus:outline-none focus:border focus:border-sky-500 caret-sky-500 scrollbar-hide '
                             + 'laptop:text-[18px] laptop:leading-[34px] '
                             + 'dark:bg-slate-800'}
                         type='tel'

@@ -1,65 +1,92 @@
+/**
+ * Imports : React
+ */
 import React from "react";
 
+/**
+ * Imports : media
+ */
 import IcDzen from '../../assets/icons/IcDzen'
 import IcVK from '../../assets/icons/IcVK'
 import IcTelegram from '../../assets/icons/IcTelegram'
-
 import { AiOutlineArrowUp } from 'react-icons/ai'
+
+/**
+ * Imports : scripts
+ */
 import Symbol from '../view/Symbol';
 
-function Footer(props) {
+function Footer() {
 
   const scrollButtonHandler = () => { window.scrollTo({ top: 0, left: 0, behavior: 'smooth' }) };
 
   return (
-    <footer className="pb-[40px]">
+    <footer className="py-[40px] border-t border-[#D9D9D9] dark:border-[#253646]">
 
-      <div className="flex justify-center laptop:justify-between">
+      <div className={
+        'flex justify-center '
+        + 'laptop:justify-between'}>
 
-        <div className="flex space-x-8">
+        <div className="flex space-x-[20px]">
 
-          <a href="https://vk.com/itsdevelopmentru">
-            <IcVK theme={props.theme} />
+          <a
+            href="https://vk.com/itsdevelopmentru"
+            className={
+              'w-[50px] aspect-square '
+              + 'laptop:w-[66px]'}>
+            <IcVK/>
           </a>
 
-          <a href="https://google.com/">
-            <IcDzen theme={props.theme} />
+          <a
+            href="https://dzen.ru/id/625161885fa8243b3e5b4ec3"
+            className={
+              'w-[50px] aspect-square '
+              + 'laptop:w-[66px]'}>
+            <IcDzen/>
           </a>
 
-          <a href="https://t.me/+3ERzYQm6fUxhNjky">
-            <IcTelegram theme={props.theme} />
+          <a
+            href="https://t.me/+3ERzYQm6fUxhNjky"
+            className={
+              'w-[50px] aspect-square '
+              + 'laptop:w-[66px]'}>
+            <IcTelegram/>
           </a>
 
         </div>
 
 
-        <div
+        <button
           className={
-            'p-[3px] w-16 h-16 hidden tablets:block '
-            + 'bg-gradient-to-r from-sky-300 to-sky-500 p-[3px] border-cyan-400 rounded-xl cursor-pointer'}
+            'p-[3px] w-[50px] aspect-square hidden '
+            + 'bg-sky-500 rounded-xl '
+            + 'laptop:w-[66px] laptop:block'}
           onClick={scrollButtonHandler}>
 
           <div className="text-sky-500 flex justify-center items-center rounded-xl bg-white w-full h-full dark:bg-[#191E25]">
             <AiOutlineArrowUp className="w-8 h-8" />
           </div>
 
-        </div>
+        </button>
 
       </div>
 
-      <div className={
-        'flex flex-col items-center mt-9 space-y-2 tablets:items-start '
-        + 'font-light text-base text-black '
-        + 'dark:text-white'}>
+      <p className={
+        'flex flex-col items-center mt-[35px] space-y-[12px] '
+        + 'font-light '
+        + 'laptop:items-start '}>
 
-        <p className="">
+        <span>
+          Сотрудничество: itsdevelopmentru<Symbol symbol="@" />gmail.com
+        </span>
+        <span>
           ОГРНИП: 322665800197196
-        </p>
-        <p className="">
+        </span>
+        <span>
           Copyright <Symbol symbol="&copy;" /> 2022. All rights reserved
-        </p>
+        </span>
 
-      </div>
+      </p>
 
     </footer>
   );

@@ -20,6 +20,11 @@ export default function BlockPreview() {
     const classesPreviewAdvantageDigit = "basis-1/2 text-center text-[50px] leading-[50px]";
     const classesPreviewAdvantageText = "basis-1/2 text-[14px] font-base opacity-60";
 
+    const buttonClickHandler = () => {
+        document.getElementById('feedback').scrollIntoView({
+            behavior: 'smooth'
+        });
+    }
 
     return (
         <section className={
@@ -46,7 +51,7 @@ export default function BlockPreview() {
                     </h1>
 
                     <p className={'mb-[45px] '
-                        +'text-neutral-900 dark:text-white leading-[28px] text-center '
+                        + 'text-neutral-900 dark:text-white leading-[28px] text-center '
                         + 'laptop:text-left '
                         + 'large:leading-[32px] '
                         + 'desktop:leading-[34px]'}>
@@ -54,13 +59,15 @@ export default function BlockPreview() {
                         Мы реализуем уникальных ботов с веб интерфейсами, гарантирующих перевыполнение ожиданий заказчика и легкую интеграцию в ваш бизнес.
                     </p>
 
-                    <button className={
-                        'py-[19px] px-[46px] w-max mx-auto -mb-[80px] '
-                        + 'leading-[30px] font-bold text-white shadow-blue rounded-xl bg-gradient-to-t from-sky-500 to-sky-300 transition-all duration-200 hover:shadow-blue-extended '
-                        + 'laptop:text-[19px] laptop:mx-0 laptop:mb-0 '
-                        + 'large:py-[17px] large:px-[41px] '
-                        + 'desktop:text-[22px] desktop:leading-[33px] '
-                        + 'dark:to-sky-500'}>
+                    <button
+                        onClick={buttonClickHandler}
+                        className={
+                            'py-[19px] px-[46px] w-max mx-auto -mb-[80px] '
+                            + 'leading-[30px] font-bold text-white shadow-blue rounded-xl bg-gradient-to-t from-sky-500 to-sky-300 transition-all duration-200 hover:shadow-blue-extended '
+                            + 'laptop:text-[19px] laptop:mx-0 laptop:mb-0 '
+                            + 'large:py-[17px] large:px-[41px] '
+                            + 'desktop:text-[22px] desktop:leading-[33px] '
+                            + 'dark:to-sky-500'}>
                         Свяжитесь со мной
                     </button>
 
@@ -73,7 +80,7 @@ export default function BlockPreview() {
                     + 'desktop:w-[330px] '}>
                     <div className="camera"></div>
                     <div className="display h-full rounded-[20px] ">
-                        <img src={MockupGIF} className={'h-full w-full'}/>
+                        <img src={MockupGIF} className={'h-full w-full'} />
                     </div>
                 </div>
 
@@ -92,7 +99,7 @@ export default function BlockPreview() {
                     + 'dark:bg-[#1A232C] dark:text-white dark:border-slate-800'}>
 
                     <div className="flex flex-col">
-                        <div className={classesPreviewAdvantageDigitLaptop}>25<Symbol symbol='%'/></div>
+                        <div className={classesPreviewAdvantageDigitLaptop}>25<Symbol symbol='%' /></div>
                         <p className={classesPreviewAdvantageTextLaptop}>Увеличение<br /> конверсионности</p>
                     </div>
 
@@ -123,7 +130,7 @@ export default function BlockPreview() {
 
 
                 <div className="flex justify-between items-center">
-                    <div className={classesPreviewAdvantageDigit}>25<Symbol symbol='%'/></div>
+                    <div className={classesPreviewAdvantageDigit}>25<Symbol symbol='%' /></div>
                     <p className={classesPreviewAdvantageText}>Увеличение<br /> конверсионности</p>
                 </div>
 
@@ -131,14 +138,14 @@ export default function BlockPreview() {
 
                 <div className="flex justify-between items-center">
                     <div className={classesPreviewAdvantageDigit}>50</div>
-                    <p className={classesPreviewAdvantageText}>Готовых<br/> проектов</p>
+                    <p className={classesPreviewAdvantageText}>Готовых<br /> проектов</p>
                 </div>
 
                 <div className={classesPreviewAdvantageDivider} />
 
                 <div className="flex justify-between items-center">
                     <div className={classesPreviewAdvantageDigit}>20т</div>
-                    <p className={classesPreviewAdvantageText}>Минимальный<br/> бюджет</p>
+                    <p className={classesPreviewAdvantageText}>Минимальный<br /> бюджет</p>
                 </div>
 
             </div>

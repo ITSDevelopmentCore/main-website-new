@@ -8,6 +8,13 @@ module.exports = {
   theme: {
     extend: {
 
+      backgroundImage: (theme) => ({
+        'award':
+          "url('Z:/Projects/Web/main-website-new/source/page_telegram/assets/media/award.svg')",
+        'award-d':
+        "url('Z:/Projects/Web/main-website-new/source/page_telegram/assets/media/award-dark.svg')",
+      }),
+
       colors: {
         neutral: colors.neutral,
       },
@@ -36,9 +43,14 @@ module.exports = {
       'large': '1300px',
       'desktop': '1550px'
     },
-
-
   },
+
+  variants: {
+    extend: {
+      backgroundImage: ['dark'],
+    },
+  },
+
 
   plugins: [
     require("daisyui"),

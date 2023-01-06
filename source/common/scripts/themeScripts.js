@@ -1,10 +1,5 @@
 import { changeThemeSwitcherState, hideDarkThemeModal } from "./changeViewByIdScripts";
 
-export function isTailwindDarkThemeEnabled()
-{
-    return document.documentElement.classList.contains('dark');
-}
-
 export function applyTailwindDarkTheme(enableDarkTheme)
 {
     if (enableDarkTheme)

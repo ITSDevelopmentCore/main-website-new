@@ -28,26 +28,23 @@ function Header() {
 
     return (
         <header className={
-            'flex justify-between items-center py-[10px] relative '
-            + 'laptop:py-[36px] '
+            'py-[10px] flex justify-between items-center '
+            + 'laptop:py-[30px] '
             + 'desktop:py-[60px] '} >
 
             <div className="flex items-center">
 
                 <div className={
-                    'laptop:mr-14 '
-                    + 'font-bold text-[30px] leading-[46px] '
-                    + 'laptop:text-[32px] laptop:leading-[48px] '
-                    + 'desktop:mr-28 '}>
-                    <span className="dark:text-white text-neutral-900">its.</span>
-                    <span className="text-sky-500">dev</span>
+                    'font-bold text-[30px] leading-[46px] '
+                    + 'laptop:mr-14 laptop:text-[32px] laptop:leading-[48px]'}>
+                    its.<span className="text-sky-500">dev</span>
                 </div>
 
                 <nav className={
                     'hidden '
                     + 'laptop:block'}>
 
-                    <ul className="flex items-center">
+                    <ul className="flex items-center pt-[5px]">
 
                         <DropdownMenu
                             title="О компании"
@@ -105,7 +102,7 @@ function Header() {
                     <BsFillTelephoneFill className="text-sky-500 w-6 h-6 mr-2" />
 
                     <a href="tel:89122486136"
-                       className="mr-[52px]">
+                        className="mr-[52px]">
                         <Symbol symbol="+" />
                         7
                         <Symbol symbol=" " />

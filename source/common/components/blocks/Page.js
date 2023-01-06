@@ -21,7 +21,8 @@ import Header from "../blocks/Header";
 export const ThemeContext = React.createContext();
 
 export default function Page(props) {
-    const [cookies, setCookie] = useCookies(["user"]);
+
+    const [cookies, setCookie] = useCookies(['user']);
     const [theme, setTheme] = useState('light')
 
     useEffect(() => {
@@ -45,12 +46,12 @@ export default function Page(props) {
     function changeThemeCallback(changedToDark) {
         if (changedToDark) {
             setCookie('theme', 'dark');
-            setTheme('dark');
             applyTailwindDarkTheme(true);
+            setTheme('dark');
         } else {
             setCookie('theme', 'light');
-            setTheme('light');
             applyTailwindDarkTheme(false);
+            setTheme('light');
         }
     }
 
@@ -64,7 +65,12 @@ export default function Page(props) {
     function workWithTheme() {
         if (cookies.theme == 'dark') {
             applyTailwindDarkTheme(true);
-            setTheme('dark')
+            setTheme('dark');
+        } 
+        if (cookies.theme == 'light')
+        {
+            applyTailwindDarkTheme(false);
+            setTheme('light')
         }
     }
 

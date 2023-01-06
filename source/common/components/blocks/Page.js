@@ -2,7 +2,7 @@
  * Imports : React
  */
 import React, { useEffect, useState } from "react"
-import { CookiesProvider, useCookies } from "react-cookie";
+import { useCookies } from "react-cookie";
 
 /**
  * Imports : Scripts
@@ -22,7 +22,7 @@ export const ThemeContext = React.createContext();
 
 export default function Page(props) {
 
-    const [cookies, setCookie] = useCookies(['user']);
+    const [cookies, setCookie] = useCookies();
     const [theme, setTheme] = useState('light')
 
     useEffect(() => {
@@ -31,16 +31,14 @@ export default function Page(props) {
     })
 
     return (
-        <CookiesProvider>
-            <ThemeContext.Provider value={{ theme, changeThemeCallback }}>
-                <Header />
-                <ModalDarkTheme />
-                <main>
-                    {props.children}
-                </main>
-                <Footer />
-            </ThemeContext.Provider>
-        </CookiesProvider>
+        <ThemeContext.Provider value={{ theme, changeThemeCallback }}>
+            <Header />
+            <ModalDarkTheme />
+            <main>
+                {props.children}
+            </main>
+            <Footer />
+        </ThemeContext.Provider>
     )
 
     function changeThemeCallback(changedToDark) {
@@ -66,9 +64,8 @@ export default function Page(props) {
         if (cookies.theme == 'dark') {
             applyTailwindDarkTheme(true);
             setTheme('dark');
-        } 
-        if (cookies.theme == 'light')
-        {
+        }
+        if (cookies.theme == 'light') {
             applyTailwindDarkTheme(false);
             setTheme('light')
         }

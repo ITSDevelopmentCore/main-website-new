@@ -4,7 +4,7 @@ import React from "react";
  * Imports: Swiper library
  */
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper';
+import { Pagination } from 'swiper/core';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
@@ -24,7 +24,7 @@ function Gallery() {
   const pagination = {
     clickable: true,
     renderBullet: function (index, className) {
-      return '<span className="w-8 h-8 bg-sky-500 rounded-[5px] ' + className + '"></span>';
+      return '<span class="w-8 h-8 bg-sky-500 rounded-[5px] ' + className + '"></span>';
     },
   };
 

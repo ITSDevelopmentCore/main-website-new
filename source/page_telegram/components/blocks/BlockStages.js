@@ -1,35 +1,59 @@
+/**
+ * Imports : React
+ */
 import React from 'react';
 
 /**
- * Imports : Project React components
+ * Imports : components
  */
 import CardStage from '../view/CardStage';
 import CardStageMobile from '../view/CardStageMobile';
 import CardBonus from '../view/CardBonus';
 
-export default function BlockStages(props) {
+/**
+ * Imports : media
+ */
+import { RiApps2Fill } from 'react-icons/ri';
+import { HiServerStack } from 'react-icons/hi2';
+
+
+export default function BlockStages() {
 
     return (
         <section className="mt-[265px]">
 
-            <h2 className={'mb-12 '
-                + 'text-[28px] leading-[32px] text-neutral-900 font-extrabold text-center  '
-                + 'laptop:text-left laptop:text-[46px] laptop:leading-[52px] '
-                + 'large:text-[58px] large:leading-[62px] '
-                + 'desktop:text-[64px] desktop:leading-[72px] '
-                + 'dark:text-white'}>
+            <h2 className={'mb-12 section-title'}>
                 Процесс работы
             </h2>
 
             <div className={
                 'hidden '
-                + 'laptop:grid laptop:grid-cols-3 laptop:gap-y-[15%] laptop:gap-x-[3%]'}>
-                <CardStage />
-                <CardStage />
-                <CardStage />
-                <CardStage />
-                <CardStage />
-                <CardStage />
+                + 'laptop:grid laptop:grid-cols-3 laptop:gap-y-[20px] laptop:gap-x-[20px] '
+                + 'large:gap-x-[40px]'}>
+                <CardStage
+                    number='1'
+                    title='Встреча с заказчиком'
+                    description='Встреча лично или в онлайне. Выяснение деталей проекта.' />
+                <CardStage
+                    number='2'
+                    title='Составление Т\З'
+                    description='Готовим официальное Т\З, описывающее все в мельчайших деталях.' />
+                <CardStage
+                    number='3'
+                    title='Разработка'
+                    description='Команда программистов высокой квалификации разрабатывает продукт согласно Т\З.' />
+                <CardStage
+                    number='4'
+                    title='Тестирование'
+                    description='Тщательно тестируем продукт для выявления ошибок в работе.' />
+                <CardStage
+                    number='5'
+                    title='Развертывание'
+                    description='Запускаем продукт на наших собственных серверах и выпускаем его в работу.' />
+                <CardStage
+                    number='6'
+                    title='Поддержка'
+                    description={'Следим за продуктом 24'+'7, оказывая реактивную поддержку по всем вопросам.'} />
             </div>
 
             <div className={
@@ -43,10 +67,19 @@ export default function BlockStages(props) {
                 <CardStageMobile />
             </div>
 
-            <div className={'flex flex-col mt-56 space-y-[18px] '
-                + 'laptop:flex-row laptop:justify-between'}>
-                <CardBonus />
-                <CardBonus />
+            <div className={'flex flex-col mt-[90px] large:mt-[180px] space-y-[18px] '
+                + 'laptop:flex-row laptop:justify-between laptop:space-y-0 laptop:space-x-[95px]'}>
+
+                <CardBonus
+                    title='Аналитика работы'
+                    description='Во время разработки мы предлагаемЗаказчику, что можно поменять или улучшить в его видении для достижения максимальных показателей. Наша задача - масштабировать и развивать Ваш бизнес. После завершения проекта - бесплатно анализируем работу и предлагаем улучшения по истечению определенных периодов'
+                    icon={<RiApps2Fill className='text-sky-500 w-14 h-14 absolute top-10 right-10' />} />
+
+                <CardBonus
+                    title='Собственные сервера'
+                    description='Мы размещаем все проекты на наших серверах. Это дает гарантию отсутствия проблем, с которыми сталкиваются арендаторы западных облачных услуг, а так же дает максимальную скорость при доработке и устранении неполадок.'
+                    icon={<HiServerStack className='text-sky-500 w-14 h-14 absolute top-10 right-10' />} />
+
             </div>
 
         </section>

@@ -2,8 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-    :root {
-      --color-primary: 240 241 246 1;
-    }
+@layer components {
+  .card_primary {
+      @apply bg-white rounded-[50px] dark:bg-card-surface dark:border dark:border-slate-800 p-[30px] laptop:p-[50px]
+  }
+
+  .section-title {
+      @apply text-[28px] leading-[32px] font-extrabold text-center laptop:text-[75px] laptop:leading-[85px] laptop:text-left desktop:text-[95px] desktop:leading-[105px]
+  }
 }

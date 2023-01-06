@@ -26,12 +26,7 @@ export default function BlockAdvantages() {
         <>
             <div className="mt-[85px]">
 
-                <h2 className={'mb-12 '
-                    + 'text-[28px] leading-[32px] text-neutral-900 font-extrabold text-center  '
-                    + 'laptop:text-left laptop:text-[46px] laptop:leading-[52px] '
-                    + 'large:text-[58px] large:leading-[62px] '
-                    + 'desktop:text-[64px] desktop:leading-[72px] '
-                    + 'dark:text-white'}>
+                <h2 className={'mb-12 section-title'}>
                     Преимущества
                 </h2>
 

@@ -17,7 +17,7 @@ function DropdownMenu(props) {
                     'flex items-center '
                     + 'cursor-pointer text-[18px] font-bold '}>
                 {props.title}
-                <TfiAngleDown className={'w-[14px] h-[10px] mt-[3px] ml-2 mr-10 inline-block group-hover:-rotate-90 transition-all text-sky-500 '} />
+                <TfiAngleDown className={'w-[14px] h-[10px] mt-[3px] ml-2 mr-10 inline-block group-hover:-rotate-90 transition-all text-sky-500 stroke-custom'} />
             </label>
 
             <div className="dropdown-content">

@@ -10,9 +10,9 @@ module.exports = {
 
       backgroundImage: (theme) => ({
         'award':
-          "url('Z:/Projects/Web/main-website-new/source/page_telegram/assets/media/award.svg')",
+          "url('D:/Progects/new_main_site/webCom/main-website-new/source/page_telegram/assets/media/award.svg')",
         'award-d':
-        "url('Z:/Projects/Web/main-website-new/source/page_telegram/assets/media/award-dark.svg')",
+        "url('D:/Progects/new_main_site/webCom/main-website-new/source/page_telegram/assets/media/dark_award.svg')",
       }),
 
       colors: {

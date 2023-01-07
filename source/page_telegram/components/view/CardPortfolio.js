@@ -15,7 +15,9 @@ function CardPortfolio(props) {
                 <div className="mockup-phone border-primary h-[600px] aspect-[1/2] scale-[0.6] -mt-[120px]">
                     <div className="camera"></div>
                     <div className="display">
-                        <div className="bg-white w-full h-full"></div>
+                        <div className="bg-white w-full h-full">
+                        <img src={props.screenshot}/>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -77,9 +79,11 @@ function CardPortfolio(props) {
                 </div>
 
                 <a className='laptop:hidden'>
+                <a href={props.link} >
                     <button className='btn w-full bg-sky-500 text-white'>
                         Посмотреть
                     </button>
+                    </a>
                 </a>
                 <img
                     className={

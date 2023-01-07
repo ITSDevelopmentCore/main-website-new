@@ -5,17 +5,15 @@ export default function CardAdvantage(props) {
     return (
         <section className={
             'w-full h-[260px] relative px-[40px] pt-[40px] pb-[20px] '
-            + 'bg-white rounded-card '
-            + 'dark:bg-card-surface dark:border dark:border-slate-800'}>
+            + 'card_primary'}>
 
             <div className={'flex justify-between'}>
 
                 <h4 className={
-                    'font-extrabold text-[35px] leading-[32px] mb-6 text-neutral-900 '
+                    'font-extrabold text-[35px] leading-[32px] mb-6 '
                     + 'laptop:text-[24px] leading-[21px] '
                     + 'large:text-[32px] leading-[29px] '
-                    + 'desktop:text-[35px] leading-[32px] '
-                    + 'dark:text-white'}>
+                    + 'desktop:text-[35px] leading-[32px] '}>
                     {props.title}
                 </h4>
 
@@ -31,11 +29,10 @@ export default function CardAdvantage(props) {
             </div>
 
             <p className={
-                'opacity-60 text-neutral-900 '
+                'opacity-60 '
                 + 'laptop:text-[14px] '
                 + 'large:text-[16px] '
-                + 'desktop:text-[18px] '
-                + 'dark:text-white'}>
+                + 'desktop:text-[18px] '}>
                 {props.description}
             </p>
 

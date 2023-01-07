@@ -1,3 +1,6 @@
+/**
+ * Imports : React
+ */
 import React from "react";
 
 /**
@@ -11,25 +14,22 @@ import 'swiper/css/pagination';
 /**
  * Imports: media
  */
-import Symbol from '../../../common/components/view/Symbol';
-import QrStub from '../../assets/media/web-app-one-qr.png'
-import QrMoreThanWork from '../../assets/media/qr_moreThanWork.jpg';
-import QrSoftWareShop from '../../assets/media/qr_softWareShop.jpg';
-import QrSmm from '../../assets/media/qr_smm.jpg';
-import QrAndy from '../../assets/media/qr_andy.jpg';
-import QrBaksMan from '../../assets/media/qr_baksMan.jpg';
+import ScreenshotPortfolio1 from "../../assets/media/screenshot_portfolio_1.png";
+import ScreenshotPortfolio2 from "../../assets/media/screenshot_portfolio_2.png";
+import ScreenshotPortfolio3 from "../../assets/media/screenshot_portfolio_3.png";
+import ScreenshotPortfolio5 from "../../assets/media/screenshot_portfolio_5.png";
+import ScreenshotPortfolio4 from "../../assets/media/screenshot_portfolio_4.png";
+import QrPorftolio1 from '../../assets/media/qr_portfolio_1.jpg';
+import QrPorftolio2 from '../../assets/media/qr_portfolio_2.jpg';
+import QrPorftolio3 from '../../assets/media/qr_portfolio_3.jpg';
+import QrPorftolio4 from '../../assets/media/qr_portfolio_4.jpg';
+import QrPorftolio5 from '../../assets/media/qr_portfolio_5.jpg';
 
 /**
  * Imports: blocks
  */
 import CardPortfolio from "./CardPortfolio";
-import MoreThenWork from "../../assets/media/screenshot_portfolio-moreThenWork_bot.png";
-import Softwareshop from "../../assets/media/screenshot_portfolio-softwareshop_bot.png";
-import SmmBot from "../../assets/media/screenshot_portfolio-smm_bot.png";
-import Andy from "../../assets/media/screenshot_portfolio-Andy_bot.png";
-import Banksman from "../../assets/media/screenshot_portfolio-Baksman_bot.png";
-
-
+import Symbol from '../../../common/components/view/Symbol';
 
 function Gallery() {
 
@@ -68,61 +68,56 @@ function Gallery() {
       <SwiperSlide>
         <CardPortfolio
           title='Больше, чем работа'
-          description='
-          Разработка бота для проекта "Больше, чем работа" для Ростуризм '
+          description='Разработка бота для проекта "Больше, чем работа" для Ростуризм '
           budget={<span>100.000 <Symbol symbol='₽' /></span>}
           result={<span>100.000 <Symbol symbol='₽' /></span>}
-          screenshot={MoreThenWork}
-          qr={QrMoreThanWork} 
+          screenshot={ScreenshotPortfolio3}
+          qr={QrPorftolio3} 
           link='https://t.me/Morethanjob_bot'/>
       </SwiperSlide>
 
       <SwiperSlide>
         <CardPortfolio
           title='Softwareshop'
-          description='
-          Бот - магазин программного обеспечения'
+          description='Бот - магазин программного обеспечения'
           budget={<span>100.000 <Symbol symbol='₽' /></span>}
           result={<span>100.000 <Symbol symbol='₽' /></span>}
-          screenshot={Softwareshop}
-          qr={QrSoftWareShop} 
+          screenshot={ScreenshotPortfolio5}
+          qr={QrPorftolio5} 
           link='https://t.me/software_shop'/>
       </SwiperSlide>
 
       <SwiperSlide>
         <CardPortfolio
           title='SMM Бот'
-          description='
-          Бот для сервиса продвижений в социальных сетях'
+          description='Бот для сервиса продвижений в социальных сетях'
           budget={<span>100.000 <Symbol symbol='₽' /></span>}
           result={<span>100.000 <Symbol symbol='₽' /></span>}
-          screenshot={SmmBot}
-          qr={QrSmm} 
+          screenshot={ScreenshotPortfolio4}
+          qr={QrPorftolio4} 
           link='https://t.me/Nakrutka_Artemkabot'/>
       </SwiperSlide>
 
       <SwiperSlide>
         <CardPortfolio
           title='Andy'
-          description='
-          Бот для частной школы английского языка'
+          description='Бот для частной школы английского языка'
           budget={<span>100.000 <Symbol symbol='₽' /></span>}
           result={<span>100.000 <Symbol symbol='₽' /></span>}
-          screenshot={Andy}
-          qr={QrAndy} 
+          screenshot={ScreenshotPortfolio1}
+          qr={QrPorftolio1} 
           link='https://t.me/AndyRobot'/>
       </SwiperSlide>
 
       <SwiperSlide>
         <CardPortfolio
           title='Banksman'
-          description='
-          Бот - для сервиса по безопасному обмену валют'
+          description='Бот - для сервиса по безопасному обмену валют'
           budget={<span>100.000 <Symbol symbol='₽' /></span>}
           result={<span>100.000 <Symbol symbol='₽' /></span>}
-          screenshot={Banksman}
-          qr={QrBaksMan} 
-          link='https://t.me/Baksman_wallet_bot?start=15221872981744'/>
+          screenshot={ScreenshotPortfolio2}
+          qr={QrPorftolio2} 
+          link='https://t.me/Baksman_wallet_bot'/>
       </SwiperSlide>
 
 

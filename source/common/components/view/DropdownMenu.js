@@ -34,7 +34,7 @@ function DropdownMenu(props) {
 function MenuItem(props) {
     return (
         <li>
-            <a href={props.link} className=''>
+            <a href={props.link}>
                 {props.title}
             </a>
         </li>

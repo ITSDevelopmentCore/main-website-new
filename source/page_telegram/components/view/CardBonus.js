@@ -18,7 +18,9 @@ function CardBonus(props) {
                 {props.title}
             </h4>
 
-            <p className='w-[90%] text-[18px] leading-[24px] opacity-60 '>
+            <p className={
+                'w-[90%] text-[12px] leading-[16px] opacity-60 '
+                +'laptop:text-[18px] laptop:leading-[24px]'}>
                 {props.description}
             </p>
 

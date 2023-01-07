@@ -21,22 +21,20 @@ export default function BlockServices() {
         }>
 
             <h2 className={
-                'mb-[10px] '
-                + 'text-[28px] leading-[42px] font-extrabold text-center '
-                + 'laptop:text-[46px] laptop:leading-[52px] laptop:text-left laptop:mb-[20px] laptop:w-[300px] '
-                + 'large:text-[58px] large:leading-[66px] '
-                + 'desktop:text-[64px] desktop:leading-[72px]'}>
+                'mb-[10px] section-title '
+                + 'laptop:mb-[20px]'}>
                 Услуги
             </h2>
 
             <p className={
                 'mb-[50px] '
                 + 'text-center opacity-60 '
-                + 'laptop:text-left laptop:w-[300px] '}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                + 'laptop:text-left laptop:w-[600px] '}>
+                Все услуги по разработке программного обеспечения предоставляются по официальному договору.
             </p>
 
-            <div className={'flex flex-col space-y-[15px] '
+            <div className={
+                'flex flex-col space-y-[15px] '
         +'laptop:space-y-[40px]'}>
 
                 <div className={
@@ -44,12 +42,12 @@ export default function BlockServices() {
                 }>
                     <CardService
                         title={'Mobile разработка'}
-                        description={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'}
+                        description={'Разработка современных мобильных приложений для бизнеса в различных нишах. IOS Android Crossplatform PWA.'}
                         image={IllustrationServiceMobile} />
 
                     <CardService
                         title={'Web разработка'}
-                        description={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'}
+                        description={'Разработка SEO-оптимизированных сайтов и веб-приложений под ключ.'}
                         image={IllustrationServiceWeb} />
                 </div>
 
@@ -58,12 +56,12 @@ export default function BlockServices() {
                 }>
                     <CardService
                         title={'Telegram разработка'}
-                        description={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'}
+                        description={'Разработка современных Telegram ботов под ключ с интеграцией Telegram Web Apps.'}
                         image={IllustrationServiceTelegram} />
 
                     <CardService
                         title={'Startup MVP'}
-                        description={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'}
+                        description={'Быстрая и бюджетная разработка MVP для стартапов, быстрого выхода на рынок, тестирования идеи.'}
                         image={IllustrationServiceMVP} />
                 </div>
 

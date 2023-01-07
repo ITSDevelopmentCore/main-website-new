@@ -8,6 +8,12 @@ export default function BlockPreview() {
 
     const { theme } = useContext(ThemeContext)
 
+    const buttonClickHandler = () => {
+        document.getElementById('feedback').scrollIntoView({
+            behavior: 'smooth'
+        });
+    }
+
     return (
         <section className={
             'flex flex-col items-center mt-[50px] '
@@ -23,9 +29,7 @@ export default function BlockPreview() {
                     + 'laptop:text-[75px] laptop:leading-[85px] laptop:text-left '
                     + 'desktop:text-[93px] desktop:leading-[106px]'}>
 
-                    <span className={
-                        'text-neutral-900 '
-                        + 'dark:text-white'}>its.</span>
+                    its.
                     <span className={'text-transparent bg-clip-text bg-gradient-to-r from-sky-500 via-sky-400 to-sky-500'}>dev</span>
 
                 </h2>
@@ -82,7 +86,9 @@ export default function BlockPreview() {
                     </button>
                 </div>
 
-                <button className={
+                <button 
+                onClick={buttonClickHandler}
+                className={
                     'p-[10px] mb-[75px] '
                     + 'text-[14px] leading-[20px] font-bold text-white shadow-blue rounded-[6px] bg-gradient-to-t from-sky-500 to-sky-300 transition-all duration-200 hover:shadow-blue-extended '
                     + 'laptop:text-[18px] laptop:px-[34px] laptop:py-[14px] '

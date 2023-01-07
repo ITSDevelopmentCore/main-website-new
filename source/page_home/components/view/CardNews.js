@@ -7,10 +7,12 @@ export default function CardAdvantage(props) {
             'flex flex-col card_primary p-[30px] '
             + 'laptop:h-[220px] laptop:flex-row '}>
 
-            <img
-                className={'w-1/2 mb-[24px] '
-                    + 'laptop:h-full aspect-video laptop:mr-[30px]'}
-                src={props.img} />
+            <div
+                className={
+                    'w-1/2 mb-[24px] '
+                    + 'laptop:h-full laptop:aspect-video laptop:mr-[30px]'}>
+                {props.img}
+            </div>
 
             <div className={'flex flex-col justify-around'}>
 

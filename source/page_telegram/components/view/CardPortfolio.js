@@ -95,7 +95,7 @@ function CardPortfolio(props) {
                 <div className="mockup-phone border-primary h-[595px] aspect-[1/2] ">
                     <div className="camera"></div>
                     <div className="display">
-                        <div className="bg-white w-full h-full"></div>
+                        <img src={props.screenshot}/>
                     </div>
                 </div>
             </div>

@@ -43,15 +43,13 @@ export default function BlockPreview() {
                         + 'large:text-[75px] large:leading-[85px] '
                         + 'desktop:text-[95px] desktop:leading-[105px]'}>
 
-                        <span className={
-                            'text-neutral-900 '
-                            + 'dark:text-white'}>Разработка<br /></span>
+                        Разработка<br />
                         <span className={'text-transparent bg-clip-text bg-gradient-to-r from-sky-500 via-sky-400 to-sky-500'}>Telegram-ботов</span>
 
                     </h1>
 
                     <p className={'mb-[45px] '
-                        + 'text-neutral-900 dark:text-white leading-[28px] text-center '
+                        + 'leading-[28px] text-center '
                         + 'laptop:text-left '
                         + 'large:leading-[32px] '
                         + 'desktop:leading-[34px]'}>
@@ -92,11 +90,11 @@ export default function BlockPreview() {
 
                 <div className={
                     'py-[50px] px-[22px] space-y-[2em] hidden flex-col laptop:flex '
-                    + 'bg-white rounded-[50px] text-neutral-900 border '
+                    + 'bg-white rounded-[50px] border '
                     + 'laptop:w-[175px] '
                     + 'large:w-[185px] '
                     + 'desktop:w-[195px] '
-                    + 'dark:bg-[#1A232C] dark:text-white dark:border-slate-800'}>
+                    + 'dark:bg-[#1A232C] dark:border-slate-800'}>
 
                     <div className="flex flex-col">
                         <div className={classesPreviewAdvantageDigitLaptop}>25<Symbol symbol='%' /></div>
@@ -124,9 +122,8 @@ export default function BlockPreview() {
 
             <div className={
                 'flex flex-col p-[26px] relative z-40 '
-                + 'laptop:hidden '
-                + 'bg-white rounded-[50px] text-neutral-900 '
-                + 'dark:bg-[#1A232C] dark:text-white dark:border dark:border-slate-800'}>
+                + 'card_primary ' 
+                + 'laptop:hidden '}>
 
 
                 <div className="flex justify-between items-center">

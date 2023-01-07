@@ -20,7 +20,9 @@ import { HiServerStack } from 'react-icons/hi2';
 export default function BlockStages() {
 
     return (
-        <section className="mt-[265px]">
+        <section className={
+            'mt-[120px] '
+            + 'laptop:mt-[265px]'}>
 
             <h2 className={'mb-12 section-title'}>
                 Процесс работы
@@ -53,18 +55,36 @@ export default function BlockStages() {
                 <CardStage
                     number='6'
                     title='Поддержка'
-                    description={'Следим за продуктом 24'+'7, оказывая реактивную поддержку по всем вопросам.'} />
+                    description={'Следим за продуктом 24' + '7, оказывая реактивную поддержку по всем вопросам.'} />
             </div>
 
             <div className={
                 'flex flex-col space-y-[16px] '
                 + 'laptop:hidden'}>
-                <CardStageMobile />
-                <CardStageMobile />
-                <CardStageMobile />
-                <CardStageMobile />
-                <CardStageMobile />
-                <CardStageMobile />
+                <CardStageMobile
+                    number='1'
+                    title='Встреча с заказчиком'
+                    description='Встреча лично или в онлайне. Выяснение деталей проекта.' />
+                <CardStageMobile
+                    number='2'
+                    title='Составление Т\З'
+                    description='Готовим официальное Т\З, описывающее все в мельчайших деталях.' />
+                <CardStageMobile
+                    number='3'
+                    title='Разработка'
+                    description='Команда программистов высокой квалификации разрабатывает продукт согласно Т\З.' />
+                <CardStageMobile
+                    number='4'
+                    title='Тестирование'
+                    description='Тщательно тестируем продукт для выявления ошибок в работе.' />
+                <CardStageMobile
+                    number='5'
+                    title='Развертывание'
+                    description='Запускаем продукт на наших собственных серверах и выпускаем его в работу.' />
+                <CardStageMobile
+                    number='6'
+                    title='Поддержка'
+                    description={'Следим за продуктом 24' + '7, оказывая реактивную поддержку по всем вопросам.'} />
             </div>
 
             <div className={'flex flex-col mt-[90px] large:mt-[180px] space-y-[18px] '

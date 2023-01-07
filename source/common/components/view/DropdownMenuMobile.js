@@ -59,13 +59,14 @@ function DropdownMenuMobileCategory(props) {
                 {props.title}
             </p>
 
-            <ul className="collapse-content">
+            <ul>
                 {props.content.map(function (item) {
                     return <DropdownMenuMobileItem
                         title={item.title}
                         link={item.href} />;
                 })}
             </ul>
+
 
         </li>
     )
@@ -76,13 +77,13 @@ function DropdownMenuMobileItem(props) {
     return (
         <a href={props.link}>
             <li className={
-                'flex justify-end items-center h-[60px] '
-                +'bg-white rounded-[4px] '
-                + 'dark:bg-card-surface dark:border dark:border-slate-800'}>
+                'flex justify-center items-center h-[60px] '
+                + 'bg-white rounded-[4px] '
+                + 'dark:bg-card-surface'}>
 
-                    <span className="text-sky-500">{props.title.split(' ')[0]}</span>
-                    &nbsp;
-                    <span>{props.title.split(' ')[1]}</span>
+                <span className="text-sky-500">{props.title.split(' ')[0]}</span>
+                &nbsp;
+                <span>{props.title.split(' ')[1]}</span>
 
             </li>
         </a>

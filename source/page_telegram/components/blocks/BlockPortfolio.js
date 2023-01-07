@@ -7,7 +7,9 @@ export default function BlockPortfolio(props) {
 
 
     return (
-        <section className="mt-52">
+        <section className={
+            'mt-[110px] '
+            + 'laptop:mt-[210px]'}>
 
             <h2 className={'mb-12 '
                 + 'text-[28px] leading-[32px] font-extrabold text-center  '
